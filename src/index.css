@@ -10,7 +10,7 @@
 }
 
 .app-card {
-  height: 500px;
+  height: 550px;
   width: 400px;
   margin: auto;
   border: 1px solid grey;
@@ -19,7 +19,14 @@
 
 .app-card h1 {
   text-align: center;
-  margin: 10px auto;
+  margin: 20px auto;
+  font-family: 'ChalkyChuck';
+}
+
+.back-arrow svg {
+  margin-left: 20px;
+  height: 30px;
+  width: 30px;
 }
 
 /* Main Menu */
@@ -49,13 +56,14 @@
 /* Meal Card */
 
 .meal-picture img {
-  height: 300px;
+  height: 280px;
   width: 360px;
   margin: 0 20px;
 }
 
 .meal-description {
   text-align: center;
+  font-family: 'ChalkyChuck';
 }
 
 .flipping-buttons {
