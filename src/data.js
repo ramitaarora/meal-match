@@ -68,6 +68,10 @@ class Meal {
   }
 }
 
+// function addNewMeal(mealName, mealType, picture, isVegetarian, isVegan, isHealthy) {
+    
+// }
+
 const pancakes = new Meal("Pancakes", "breakfast", "https://static.onecms.io/wp-content/uploads/sites/43/2022/02/16/21014-Good-old-Fashioned-Pancakes-mfs_001.jpg");
 pancakes.toggleVegetarian();
 pancakes.generateRecipe(1, "cup", "flour");
@@ -80,8 +84,12 @@ eggsToast.generateRecipe(2, "", "eggs");
 eggsToast.generateRecipe(2, "pieces of", "toast");
 eggsToast.generateRecipe(1, "pinch of", "salt");
 
-const allMeals = [pancakes, eggsToast];
+const salad = new Meal("Salad", "lunch", "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg?quality=90&webp=true&resize=600,545");
+salad.generateRecipe(1, "head", "lettuce");
+salad.generateRecipe(1, "", "tomato");
+
+const allMeals = [pancakes, eggsToast, salad];
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert"];
-const mealOptions = ["Vegetarian", "Vegan", "Healthy"];
+const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
 
 export {Meal, allMeals, mealTypes, mealOptions};

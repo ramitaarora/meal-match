@@ -1,12 +1,71 @@
+// import ReactDOM from "react-dom/client";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import MainMenu from "./pages/MainMenu";
+// import MealChoice from "./pages/MealChoice";
+// import Recipe from "./pages/Recipe";
+// import AddRecipe from "./pages/AddRecipe";
+
 import {Meal, allMeals, mealTypes, mealOptions} from './data.js';
+import { useState, useEffect } from 'react';
+
+// function changeState(state) {
+//   state = !state;
+// }
 
 function App() {
+  // Main Manu States
+  const [mainMenuPage, setMainMenuPage] = useState(true);
+  const [mealTypeData, setMealTypeData] = useState(mealTypes[0]);
+  const [optionTypeData, setOptionTypeData] = useState([]);
+
+  // Meal Choice States
+  const [mealChoicePage, setMealChoicePage] = useState(false);
+  const [mealChoice, setMealChoice] = useState();
+
+  // Recipe Page States
+  const [recipePage, setRecipePage] = useState(false);
+
+
+  const setMeals = (mealData, optionData) => {
+    setMealTypeData(mealData);
+    console.log(mealTypeData);
+    setOptionTypeData([optionData]);
+    console.log(optionTypeData);
+    setMainMenuPage(false);
+    setMealChoicePage(true);
+  }
+
+  const setMealSelection = (chosenMeal) => {
+    setMealChoice(chosenMeal);
+    setMealChoicePage(false);
+    setRecipePage(true);
+  }
+
+  const backButton = () => {
+    setMealChoicePage(false);
+    setRecipePage(false);
+    setMainMenuPage(true);
+  }
+
+  const setPages = () => {
+    if (mainMenuPage) {
+      return <MainMenu setMeals={setMeals}/>
+    } else if (mealChoicePage) {
+      return <MealChoice mealOptionseData={mealTypeData} allOptionsData={optionTypeData} mealChoice={setMealSelection} />
+    } else if (recipePage) {
+      return <Recipe />
+    }
+    
+    else {
+      return <p>Error</p>
+    }
+  }
+
   return (
     <div className="app">
       <div className="app-card">
         <h1>Meal Match</h1>
-        <MealChoice />
-        
+        {setPages()}
       </div>
     </div>
     
@@ -15,7 +74,15 @@ function App() {
 
 export default App;
 
-function MainMenu() {
+function MainMenu({setMeals}) {
+  const [mealTypeSelection, setMealTypeSelection] = useState(mealTypes[0]);
+  const [otherOptionSelection, setOtherOptionSelection] = useState([]);
+
+  function testing() {
+    console.log("meal type", mealTypeSelection);
+    console.log("other options", otherOptionSelection);
+  }
+
   return (
       <div className="main-menu">
         <h4>Please select from the following options:</h4>
@@ -24,18 +91,24 @@ function MainMenu() {
 
             <div className="choose-meal-type">
               <p>Choose Meal Type:</p>
-                <select name={mealTypes[0]} id="meal-types">
+                <select id="meal-types" value={mealTypeSelection} onChange={event => setMealTypeSelection(event.target.value)}>
                   {mealTypes.map(item => <option value={item}>{item}</option>)}
                 </select>
             </div>
 
             <div className="choose-other-options">
               <p>Other:</p>
-                {mealOptions.map(option => <div className="options"><input type="checkbox"></input><p>{option}</p></div>)}
+                {mealOptions.map(option => 
+                  <div className="options">
+                    <input type="checkbox" value={option} onChange={event => setOtherOptionSelection(pre => [...pre, event.target.value])}>
+                    </input>
+                    <label for={option}>{option}</label>
+                  </div>
+                )}
             </div>
 
             <div className="submit-options">
-              <button>Submit</button>
+              <button onClick={() => setMeals(mealTypeSelection, otherOptionSelection)}>Submit</button>
             </div>
 
           </form>
@@ -93,6 +166,20 @@ function Recipe() {
       <div className="back">
         <button>Back to Main Menu</button>
       </div>
+    </div>
+  )
+}
+
+function AddRecipe () {
+  return (
+    <div className="add-recipe">
+    </div>
+  )
+}
+
+function SearchRecipes () {
+  return (
+    <div className="search-recipes">
     </div>
   )
 }
