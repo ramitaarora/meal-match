@@ -1,4 +1,4 @@
-import {Meal, allMeals, mealTypes, mealOptions} from './data.js';
+import {allMeals, mealTypes, mealOptions} from './data.js';
 import { useState, useEffect } from 'react';
 // import {MainMenu} from './pages/MainMenu.js';
 // import {MealChoice} from './pages/MealChoice.js';
@@ -85,7 +85,15 @@ function MainMenu({setMeals, search}) {
 
   return (
       <div className="main-menu">
-        <h4>Please select from the following options:</h4>
+      
+        <div className="search-button-container">
+          <button className="search-button" onClick={search}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+          </button>
+        
+        <h2>Please select from the following options:</h2>
         <div className="choose-options">
           <form>
 
@@ -97,12 +105,11 @@ function MainMenu({setMeals, search}) {
             </div>
 
             <div className="choose-other-options">
-              <p>Other:</p>
-                {mealOptions.map(option => 
+              <p>Select Other Options:</p>
+                {mealOptions.map(option =>
                   <div className="options">
-                    <input type="checkbox" value={option} onChange={event => setOtherOptionSelection(pre => [...pre, event.target.value])}>
-                    </input>
-                    <label for={option}>{option}</label>
+                    <input type="checkbox" value={option} id={option}></input>
+                    <label htmlFor={option} class="label-background" onClick={event => setOtherOptionSelection(pre => [...pre, event.target.value])}>{option}</label>
                   </div>
                 )}
             </div>
@@ -112,8 +119,8 @@ function MainMenu({setMeals, search}) {
             </div>
 
           </form>
-          
-          <button onClick={search}>Search All Recipes</button>
+          </div>
+
         </div>
       </div>
   );
@@ -178,12 +185,14 @@ function Recipe({selectedMeal, back}) {
       <div className="meal-picture-recipe">
         <img src={selectedMeal.picture} alt={selectedMeal.mealName}/>
       </div>
-      {selectedMeal.recipe.map(item => 
-        <div className="recipe-map">
-          <input type="checkbox"></input><p>{item}</p>
-        </div>
-        )
-      }
+      <div className="ingredients">
+        {selectedMeal.recipe.map(item => 
+          <div className="recipe-map">
+            <input type="checkbox"></input><p>{item}</p>
+          </div>
+          )
+        }
+      </div>
       <div className="back">
         <button onClick={back}>Back to Main Menu</button>
       </div>
@@ -208,7 +217,7 @@ function SearchRecipes ({back}) {
       </div>
 
       <div className="search-bar">
-        <input type="search"></input>
+        <input type="search" placeholder="Search Recipes"></input>
       </div>
     
     </div>

@@ -59,13 +59,13 @@ salad.generateRecipe(1, "head", "lettuce");
 salad.generateRecipe(1, "", "tomato");
 
 const butterChicken = new Meal("Butter Chicken", "Dinner", "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/04/butter-chicken-recipe.jpg", []);
-butterChicken.generateRecipe(1, "", "chicken");
+butterChicken.generateRecipe(1, "", "chicken breast");
 butterChicken.generateRecipe(1, "", "tomato");
 butterChicken.generateRecipe(2, "cloves", "garlic");
 butterChicken.generateRecipe(0.5, "", "onion");
 butterChicken.generateRecipe(1, "tsp", "butter chicken masala");
 
-const applesPB = new Meal("Apples and Peanut Butter", "Snack", "https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/apple-slices-with-peanut-butter-snack-recipe.jpg", ["Vegetarian", "Gluten-Free", "Healthy"]);
+const applesPB = new Meal("Apples and Peanut Butter", "Snacks", "https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/apple-slices-with-peanut-butter-snack-recipe.jpg", ["Vegetarian", "Gluten-Free", "Healthy"]);
 applesPB.generateRecipe(1, "whole", "apple");
 applesPB.generateRecipe(1, "tbsp", "peanut butter");
 

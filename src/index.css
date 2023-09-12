@@ -1,31 +1,53 @@
 /* Global Styles */
 
+:root {
+  --yellow: #f1f09c;
+}
+
 * {
   font-family: Raleway, 'Times New Roman', Times, serif;
+  font-size: 16px;
 }
 
 .app {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  margin: 0;
   justify-items: center;
   align-items: center;
 }
 
 .app-card {
-  height: 550px;
-  width: 400px;
-  margin: auto;
+  height: 650px;
+  width: 375px;
+  margin: 0 auto;
   border: 1px solid grey;
   box-shadow: 5px 5px 5px grey;
+  border-radius: 15px;
+  /* overflow: hidden; */
+  background: linear-gradient(#FFFFFF, 60%, var(--yellow));
 }
 
 .app-card h1 {
   text-align: center;
-  margin: 20px auto;
+  margin: 25px auto;
   font-family: 'Dancing Script', Raleway, Georgia;
-  font-size: 40px;
+  font-size: 50px;
 }
+
+.main-menu, 
+.search-recipes,
+.meal-choice,
+.recipe,
+.add-recipe {
+  margin: 5px 10px 0px 10px;
+  padding: 10px;
+  /* border: 1px solid black; */
+  height: 500px;
+}
+
+/* Home Button Styles */
 
 .back-arrow {
   display: flex;
@@ -37,51 +59,138 @@
 }
 
 .back-arrow svg {
-  margin-left: 20px;
   height: 30px;
   width: 30px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 20px;
 }
 
 /* Main Menu */
 
-.main-menu {
-  margin: 5px 10px 0px 10px;
+.main-menu h2 {
+  text-align: center;
+  font-size: 110%;
+  margin-top: 30px;
 }
 
-.choose-options {
+.main-menu p, 
+.main-menu input, 
+.main-menu select,
+.main-menu label {
+  font-size: 120%;
+}
+
+.choose-meal-type select {
+  margin-left: 10px;
+  padding: 0 15px;
+  height: 40px;
+  border: 1px solid lightgrey;
+}
+
+.choose-options, .choose-other-options {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 .options {
-  display: flex;
+  width: 100%;
 }
 
-.options p {
-  margin-left: 5px;
+.choose-other-options p {
+  margin: 15px 10px; 
+  text-align: left;
+  margin-top: 20px;
+}
+
+.options label {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  background-color: white;
+  width: 80%;
+}
+
+.options input {
+  display: none;
+}
+
+.options label:hover {
+  background-color: lightgrey;
+}
+
+.options input:checked ~ .label-background {
+  background-color: lightgrey;
+}
+
+.options, .choose-meal-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.submit-options {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .submit-options button {
-  margin: 15px auto;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  background-color: white;
+}
+
+.submit-options button:hover {
+  background-color: lightgrey;
+}
+
+.search-button-container {
+  display: block;
+  text-align: right;
+  position: relative;
+  top: -50px;
+}
+
+.search-button {
+  border: none;
+  background: none;
+}
+
+.search-button svg:hover {
+  fill: black;
 }
 
 /* Meal Card */
 
+.meal-picture {
+  height: 320px;
+  width: 300px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
 .meal-picture img {
-  height: 280px;
-  width: 360px;
-  margin: 0 20px;
+  height: 320px;
+  width: 300px;
+  object-position: center;
+  object-fit: cover;
 }
 
 .meal-description {
   text-align: center;
 }
 
+.meal-description h2 {
+  font-size: 150%;
+}
+
 .flipping-buttons {
   display: flex;
   justify-content: space-between;
+  margin: 20px 0;
 }
 
 .next svg {
@@ -102,15 +211,27 @@
 
 /* Recipe Card */
 
-.recipe {
-  margin: 10px 20px 0 20px;
+.recipe h2 {
+  font-size: 150%;
+}
+
+.meal-picture-recipe {
+  height: 120px;
+  width: 120px;
+  margin: 0 10px 0 0;
+  float: right;
+  overflow: hidden;
 }
 
 .meal-picture-recipe img {
   height: 120px;
-  width: 150px;
-  margin: 0 20px;
-  float: right;
+  width: 120px;
+  object-fit: center;
+  object-fit: cover;
+}
+
+.ingredients {
+  height: 350px;
 }
 
 .recipe-map {
@@ -121,6 +242,44 @@
   margin-left: 5px;
 }
 
+.recipe input {
+  margin-left: 10px;
+}
+
 .recipe .back button {
   margin: 15px auto;
+}
+
+/* Search Page */
+
+.search-bar {
+  margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  border: 1px solid lightgrey;
+  padding: 10px;
+  margin: 0 auto;
+  color: grey;
+  width: 300px;
+  /* border-radius: 15px; */
+}
+
+.back {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.back button {
+  margin: 40px auto;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  background-color: white;
+}
+
+.back button:hover {
+  background-color: lightgrey;
 }
