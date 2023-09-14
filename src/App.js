@@ -60,7 +60,7 @@ export default function App() {
     } else if (recipePage) {
       return <Recipe selectedMeal={mealChoice} back={backButton} />
     } else if (searchRecipes) {
-      return <SearchRecipes back={backButton}/>
+      return <SearchRecipes back={backButton} selectedMeal={mealChoice}/>
     }
     
     else {
@@ -196,6 +196,7 @@ function Recipe({selectedMeal, back}) {
       <div className="back">
         <button onClick={back}>Back to Main Menu</button>
       </div>
+
     </div>
   )
 }
@@ -207,17 +208,32 @@ function AddRecipe () {
   )
 }
 
-function SearchRecipes ({back}) {
+function SearchRecipes ({back, selectedMeal}) {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect (() => {
+    let searchMeals = allMeals.filter((meal) => ( 
+      (meal.mealName).toLowerCase().startsWith(searchTerm.toLowerCase()) || 
+      (meal.mealType).toLowerCase().startsWith(searchTerm.toLowerCase())
+    ));
+    setSearchResults(searchMeals);
+    console.log(searchResults)
+  }, [searchTerm])
+
   return (
     <div className="search-recipes">
-      <div className="back-arrow" onClick={back}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
-        </svg>
-      </div>
 
       <div className="search-bar">
-        <input type="search" placeholder="Search Recipes"></input>
+        <input type="search" placeholder="Search Recipes" value={searchTerm} onChange={event => setSearchTerm(event.target.value)}></input>
+      </div>
+
+      <div className="search-results">
+        {searchResults.map(meal => <p>{meal.mealName}</p>)}
+      </div>
+
+      <div className="back">
+        <button onClick={back}>Back to Main Menu</button>
       </div>
     
     </div>
