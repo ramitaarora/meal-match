@@ -88,7 +88,7 @@ function MainMenu({setMeals, search}) {
       
         <div className="search-button-container">
           <button className="search-button" onClick={search}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey" class="bi bi-search" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey" className="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
           </svg>
           </button>
@@ -108,8 +108,8 @@ function MainMenu({setMeals, search}) {
               <p>Select Other Options:</p>
                 {mealOptions.map(option =>
                   <div className="options">
-                    <input type="checkbox" value={option} id={option}></input>
-                    <label htmlFor={option} class="label-background" onClick={event => setOtherOptionSelection(pre => [...pre, event.target.value])}>{option}</label>
+                    <input type="checkbox" value={option} id={option} onClick={event => setOtherOptionSelection(pre => [...pre, event.target.value])}></input>
+                    <label htmlFor={option} className="label-background" >{option}</label>
                   </div>
                 )}
             </div>
@@ -131,7 +131,8 @@ function MealChoice({mealOptionsData, allOptionsData, mealChoice, back}) {
   const [mealArray, setMealArray] = useState(allMeals);
 
   useEffect (() => {
-    let newMealArray = allMeals.filter((item) => item.mealType === mealOptionsData /*|| allOptionsData in item.options*/);
+    //console.log(mealOptionsData, allOptionsData);
+    let newMealArray = allMeals.filter((item) => item.mealType === mealOptionsData);
     setMealArray(newMealArray);
   }, [])
 
