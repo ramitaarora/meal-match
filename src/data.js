@@ -42,39 +42,124 @@ class Meal {
     
 // }
 
-const pancakes = new Meal("Pancakes", "Breakfast", "https://static.onecms.io/wp-content/uploads/sites/43/2022/02/16/21014-Good-old-Fashioned-Pancakes-mfs_001.jpg", ["Vegetarian", "Vegan"]);
-//pancakes.toggleVegetarian();
+// Breakfast
+
+const pancakes = new Meal("Pancakes", "Breakfast", "./images/pancakes.jpeg", ["Vegetarian", "Vegan"]);
 pancakes.generateRecipe(1, "cup", "flour");
 pancakes.generateRecipe(1, "", "banana");
 pancakes.generateRecipe(1, "cup", "water");
 
-const eggsToast = new Meal("Eggs and Toast", "Breakfast", "https://images.food52.com/OMFowAX383mQO2W3NYoZy4vXfug=/2016x1344/filters:format(webp)/91fbf05f-31e8-4e64-a042-900e58b1838a--fried_egg_on_toast.jpg", ["Healthy"]);
-//eggsToast.toggleVegetarian();
+const eggsToast = new Meal("Eggs and Toast", "Breakfast", "./images/eggs-toast.jpeg", ["Healthy", "Vegetarian"]);
 eggsToast.generateRecipe(2, "", "eggs");
 eggsToast.generateRecipe(2, "pieces of", "toast");
 eggsToast.generateRecipe(1, "pinch of", "salt");
 
-const salad = new Meal("Salad", "Lunch", "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg?quality=90&webp=true&resize=600,545", ["Vegetarian", "Healthy", "Gluten-Free", "Vegan"]);
+const breakfastQuiche = new Meal("Breakfast Quiche", "Breakfast", "./images/breakfast-quiche.jpeg", ["Gluten-Free", "Vegetarian"]);
+
+const crepes = new Meal("Crepes", "Breakfast", "./images/crepes.jpeg", ["Vegetarian"]);
+
+const loxBagel = new Meal("Lox Bagel", "Breakfast", "./images/lox-bagel.jpeg", []);
+
+const omelette = new Meal("Omelette", "Breakfast", "./images/omelette.jpeg", ["Vegetarian", "Healthy", "Gluten-Free"]);
+
+const shakshuka = new Meal("Shakshuka", "Breakfast", "./images/shakshuka.jpeg", ["Healthy", "Gluten-Free"]);
+
+// Lunch
+
+const salad = new Meal("Salad", "Lunch", "./images/salad.jpeg", ["Vegetarian", "Healthy", "Gluten-Free", "Vegan"]);
 salad.generateRecipe(1, "head", "lettuce");
 salad.generateRecipe(1, "", "tomato");
 
-const butterChicken = new Meal("Butter Chicken", "Dinner", "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/04/butter-chicken-recipe.jpg", []);
+const avocadoSandwich = new Meal("Avocado Sandwich", "Lunch", "./images/avocado-sandwich.jpeg", ["Vegetarian", "Healthy"]);
+
+const lentilSoup = new Meal("Lentil Soup", "Lunch", "./images/lentil-soup.jpeg", ["Gluten-Free", "Healthy", "Vegetarian", "Vegan"]);
+
+const pumpkinSoup = new Meal("Pumpkin Soup", "Lunch", "./images/pumpkin-soup.jpeg", ["Healthy", "Gluten-Free", "Vegetarian", "Vegan"]);
+
+const ramen = new Meal("Ramen", "Lunch", "./images/ramen.jpeg", []);
+
+const grilledChickenSandwich = new Meal("Grilled Chicken Sandwich", "Lunch", "./images/chicken-sandwich.jpeg", ["Healthy"]);
+
+const spinachChicken = new Meal("Spinach Chicken", "Lunch", "./images/spinach-chicken.jpeg", ["Healthy", "Gluten-Free"]);
+
+// Dinner
+
+const butterChicken = new Meal("Butter Chicken", "Dinner", "./images/butter-chicken.jpg", ["Gluten-Free"]);
 butterChicken.generateRecipe(1, "", "chicken breast");
 butterChicken.generateRecipe(1, "", "tomato");
 butterChicken.generateRecipe(2, "cloves", "garlic");
 butterChicken.generateRecipe(0.5, "", "onion");
 butterChicken.generateRecipe(1, "tsp", "butter chicken masala");
 
-const applesPB = new Meal("Apples and Peanut Butter", "Snacks", "https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/apple-slices-with-peanut-butter-snack-recipe.jpg", ["Vegetarian", "Gluten-Free", "Healthy"]);
+const tacos = new Meal("Tacos", "Dinner", "./images/tacos.jpeg", ["Vegetarian"])
+tacos.generateRecipe("", "", "taco shells");
+tacos.generateRecipe("", "", "meat of choice");
+tacos.generateRecipe("", "", "lettuce");
+tacos.generateRecipe("", "", "refried beans");
+tacos.generateRecipe("", "", "cheese");
+
+const burger = new Meal("Burger", "Dinner", "./images/burger.jpeg", []);
+burger.generateRecipe(1, "", "patty");
+burger.generateRecipe("", "", "buns");
+burger.generateRecipe(1, "slice", "onion");
+burger.generateRecipe(1, "slice", "tomato");
+burger.generateRecipe(1, "slice", "cheese");
+burger.generateRecipe("", "", "lettuce");
+
+const biriyani = new Meal("Biriyani", "Dinner", "./images/biryani.jpeg", ["Gluten-Free"]);
+
+const pasta = new Meal("Pasta", "Dinner", "./images/pasta.jpeg", ["Vegetarian", "Vegan"]);
+
+const pizza = new Meal("Pizza", "Dinner", "./images/pizza.jpeg", ["Vegetarian"]);
+
+const salmon = new Meal("Salmon", "Dinner", "./images/salmon.jpeg", ["Healthy", "Gluten-Free"]);
+
+const sushi = new Meal("Sushi", "Dinner", "./images/sushi.jpeg", []);
+
+// Snacks
+
+const applesPB = new Meal("Apples and Peanut Butter", "Snacks", "./images/apples-peanut-butter.jpeg", ["Vegetarian", "Gluten-Free", "Healthy"]);
 applesPB.generateRecipe(1, "whole", "apple");
 applesPB.generateRecipe(1, "tbsp", "peanut butter");
 
-const brownies = new Meal("Brownies", "Dessert", "https://joyfoodsunshine.com/wp-content/uploads/2019/06/fudgy-homemade-brownies-recipe-from-scratch-7.jpg", []);
+const breadCheese = new Meal("Bread, Cheese & Meat", "Snacks", "./images/bread-cheese-snack.jpeg", ["Healthy"]);
+
+const charcuterieBoard = new Meal("Charcuterie Board", "Snacks", "./images/charcuterie-board.jpeg", ["Healthy"]);
+
+const peanutButterToast = new Meal("Peanut Butter Toast", "Snacks", "./images/pb-toast.jpeg", ["Vegetarian", "Vegan"]);
+
+// Desserts
+
+const brownies = new Meal("Brownies", "Dessert", "./images/brownies.jpeg", []);
 brownies.generateRecipe(1, "cup", "flour");
 brownies.generateRecipe(0.5, "cup", "sugar");
 
-const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies];
-const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert"];
+const iceCream = new Meal("Ice Cream", "Dessert", "./images/ice-cream.jpeg", []);
+
+const affogato = new Meal("Affogato", "Dessert", "./images/affogato.jpeg", [])
+
+// Drinks
+
+const tea = new Meal("Tea", "Drinks", "./images/tea.jpeg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+
+const coffee = new Meal("Coffee", "Drinks", "./images/coffee.jpeg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+
+const cappucino = new Meal("Cappucino", "Drinks", "./images/cappucino.jpeg", ["Vegetarian", "Healthy", "Gluten-Free"]);
+
+const latte = new Meal("Latte", "Drinks", "./images/latte.jpeg", ["Vegetarian", "Healthy", "Gluten-Free"]);
+
+const hotChocolate = new Meal("Hot Chocolate", "Drinks", "./images/hot-chocolate.jpeg", ["Vegetarian", "Gluten-Free"]);
+
+const icedCoffee = new Meal("Iced Coffee", "Drinks", "./images/iced-coffee.jpeg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+
+const lemonade = new Meal("Lemonade", "Drinks", "./images/lemonade.jpeg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+
+
+/// Data
+
+const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
 const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
+
+const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, pumpkinSoup, ramen, salmon, grilledChickenSandwich, shakshuka, spinachChicken, sushi, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade];
 
 export {Meal, allMeals, mealTypes, mealOptions};
