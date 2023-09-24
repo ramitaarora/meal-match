@@ -80,7 +80,7 @@ export default function App() {
 };
 
 function MainMenu({setMeals, search}) {
-  const [mealTypeSelection, setMealTypeSelection] = useState(mealTypes[0]);
+  const [mealTypeSelection, setMealTypeSelection] = useState();
   const [otherOptionSelection, setOtherOptionSelection] = useState([]);
 
   return (
@@ -100,6 +100,7 @@ function MainMenu({setMeals, search}) {
             <div className="choose-meal-type">
               <p>Choose Meal Type:</p>
                 <select id="meal-types" value={mealTypeSelection} onChange={event => setMealTypeSelection(event.target.value)}>
+                  <option value={mealTypeSelection}></option>
                   {mealTypes.map(item => <option value={item}>{item}</option>)}
                 </select>
             </div>
@@ -131,12 +132,14 @@ function MealChoice({mealOptionsData, allOptionsData, mealChoice, back}) {
   const [mealArray, setMealArray] = useState(allMeals);
 
   useEffect (() => {
-    let newMealArray;
+    let newMealArray = [];
 
-    if (allOptionsData[0].length > 0) {
+    if (allOptionsData[0].length > 0 && mealOptionsData) {
       newMealArray = allMeals.filter(meal => (meal.mealType === mealOptionsData) && (meal.options[0].some(option => allOptionsData[0].includes(option))) );
-    } else {
+    } else if (allOptionsData[0].length === 0 && mealOptionsData) {
       newMealArray = allMeals.filter(meal => (meal.mealType === mealOptionsData));
+    } else if (allOptionsData[0].length > 0 && !mealOptionsData) {
+      newMealArray = allMeals.filter(meal => (meal.options[0].some(option => allOptionsData[0].includes(option))) );
     }
 
     if (newMealArray.length !== 0) {
