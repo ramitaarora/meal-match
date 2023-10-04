@@ -227,10 +227,13 @@ function SearchRecipes ({back, selectedMeal}) {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
+  // allMeals.map(meal => meal.ingredients.forEach(ingredient => ingredient))
+
   useEffect (() => {
     let searchMeals = allMeals.filter((meal) => ( 
       (meal.mealName).toLowerCase().includes(searchTerm.toLowerCase()) || 
-      (meal.mealType).toLowerCase().includes(searchTerm.toLowerCase()) // add searches by the list of ingredients
+      (meal.mealType).toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (meal.ingredients).includes(searchTerm.toLowerCase())
     ));
     setSearchResults(searchMeals);
     //console.log(searchResults)
