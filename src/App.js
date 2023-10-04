@@ -18,7 +18,7 @@ export default function App() {
   // Recipe Page States
   const [recipePage, setRecipePage] = useState(false);
 
-  // SearchRecipes States
+  // SearchRecipes Page States
   const [searchRecipes, setSearchRecipes] = useState(false);
 
 
@@ -34,6 +34,7 @@ export default function App() {
   const setMealSelection = (chosenMeal) => {
     setMealChoice(chosenMeal);
     setMealChoicePage(false);
+    setSearchRecipes(false);
     setRecipePage(true);
   }
 
@@ -60,7 +61,7 @@ export default function App() {
     } else if (recipePage) {
       return <Recipe selectedMeal={mealChoice} back={backButton} />
     } else if (searchRecipes) {
-      return <SearchRecipes back={backButton} selectedMeal={mealChoice}/>
+      return <SearchRecipes back={backButton} selectedMeal={setMealSelection}/>
     }
     
     else {
@@ -100,7 +101,7 @@ function MainMenu({setMeals, search}) {
             <div className="choose-meal-type">
               <p>Choose Meal Type:</p>
                 <select id="meal-types" value={mealTypeSelection} onChange={event => setMealTypeSelection(event.target.value)}>
-                  <option value={mealTypeSelection}></option>
+                  <option value=''>All</option>
                   {mealTypes.map(item => <option value={item}>{item}</option>)}
                 </select>
             </div>
@@ -228,12 +229,17 @@ function SearchRecipes ({back, selectedMeal}) {
 
   useEffect (() => {
     let searchMeals = allMeals.filter((meal) => ( 
-      (meal.mealName).toLowerCase().startsWith(searchTerm.toLowerCase()) || 
-      (meal.mealType).toLowerCase().startsWith(searchTerm.toLowerCase())
+      (meal.mealName).toLowerCase().includes(searchTerm.toLowerCase()) || 
+      (meal.mealType).toLowerCase().includes(searchTerm.toLowerCase()) // add searches by the list of ingredients
     ));
     setSearchResults(searchMeals);
-    console.log(searchResults)
+    //console.log(searchResults)
   }, [searchTerm])
+
+  const selectMeal = (event) => {
+    let mealIndex = allMeals.findIndex(meal => meal.mealName === event.target.innerHTML)
+    selectedMeal(allMeals[mealIndex]);
+  }
 
   return (
     <div className="search-recipes">
@@ -243,7 +249,7 @@ function SearchRecipes ({back, selectedMeal}) {
       </div>
 
       <div className="search-results">
-        {searchResults.map(meal => <p>{meal.mealName}</p>)}
+        {searchResults.map(meal => <p class="search-result-link" onClick={selectMeal}>{meal.mealName}</p>)}
       </div>
 
       <div className="back">

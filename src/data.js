@@ -6,6 +6,7 @@ class Meal {
       this._recipe = [];
       this._picture = picture;
       this._options = [options];
+      this._instructions = [];
   }
 
   get mealName() {
@@ -32,9 +33,17 @@ class Meal {
     return this._options;
   }
 
+  get instructions() {
+    return this._instructions;
+  }
+
   generateRecipe(unit, measurement, food) {
       this.ingredients.push(food);
       this.recipe.push(`${unit} ${measurement} ${food}`)
+  }
+
+  addInstructions(num, instruct) {
+    this.instructions.push(`${num}, ${instruct}`)
   }
 }
 
@@ -48,13 +57,23 @@ const pancakes = new Meal("Pancakes", "Breakfast", "./images/pancakes.jpeg", ["V
 pancakes.generateRecipe(1, "cup", "flour");
 pancakes.generateRecipe(1, "", "banana");
 pancakes.generateRecipe(1, "cup", "water");
+pancakes.generateRecipe("half", "tsp", "baking powder");
+pancakes.addInstructions(1, "Mash the banana.")
+pancakes.addInstructions(2, "Mix all ingredients together in a bowl until liquidy and smooth.")
+pancakes.addInstructions(3, "Use a ladle and pour pancake batter onto a med-hot griddle.")
+pancakes.addInstructions(4, "Flip over every 30 seconds or so until golden brown.")
+
 
 const eggsToast = new Meal("Eggs and Toast", "Breakfast", "./images/eggs-toast.jpeg", ["Healthy", "Vegetarian"]);
 eggsToast.generateRecipe(2, "", "eggs");
 eggsToast.generateRecipe(2, "pieces of", "toast");
-eggsToast.generateRecipe(1, "pinch of", "salt");
+eggsToast.generateRecipe(1, "pinch of", "salt and/or pepper");
+eggsToast.addInstructions(1, "Toast the bread.")
+eggsToast.addInstructions(2, "Crack eggs over a med-hot pan and cover with a lid for two minutes.")
+eggsToast.addInstructions(3, "Serve together when yolks are cooked as desired.")
 
-const breakfastQuiche = new Meal("Breakfast Quiche", "Breakfast", "./images/breakfast-quiche.jpeg", ["Gluten-Free", "Vegetarian"]);
+const breakfastQuiche = new Meal("Crustless Breakfast Quiche", "Breakfast", "./images/breakfast-quiche.jpeg", ["Gluten-Free", "Vegetarian"]);
+// breakfastQuiche.generateRecipe()
 
 const crepes = new Meal("Crepes", "Breakfast", "./images/crepes.jpeg", ["Vegetarian"]);
 

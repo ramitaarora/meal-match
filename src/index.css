@@ -289,3 +289,11 @@
 .back button:hover {
   background-color: lightgrey;
 }
+
+.search-result-link {
+  text-decoration: underline;
+}
+
+.search-result-link:hover {
+  cursor: pointer;
+}
