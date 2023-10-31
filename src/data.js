@@ -42,8 +42,8 @@ class Meal {
       this.recipe.push(`${unit} ${measurement} ${food}`)
   }
 
-  addInstructions(num, instruct) {
-    this.instructions.push(`${num}, ${instruct}`)
+  addInstructions(instruct) {
+    this.instructions.push(`${instruct}`)
   }
 }
 
@@ -57,37 +57,83 @@ const pancakes = new Meal("Pancakes", "Breakfast", "./images/pancakes.jpeg", ["V
 pancakes.generateRecipe(1, "cup", "flour");
 pancakes.generateRecipe(1, "", "banana");
 pancakes.generateRecipe(1, "cup", "water");
-pancakes.generateRecipe("half", "tsp", "baking powder");
-pancakes.addInstructions(1, "Mash the banana.")
-pancakes.addInstructions(2, "Mix all ingredients together in a bowl until liquidy and smooth.")
-pancakes.addInstructions(3, "Use a ladle and pour pancake batter onto a med-hot griddle.")
-pancakes.addInstructions(4, "Flip over every 30 seconds or so until golden brown.")
+pancakes.generateRecipe("1/2", "tsp", "baking powder");
+pancakes.addInstructions("Mash the banana.")
+pancakes.addInstructions("Mix all ingredients together in a bowl until liquidy and smooth.")
+pancakes.addInstructions("Use a ladle and pour pancake batter onto a med-hot griddle.")
+pancakes.addInstructions("Flip over every 30 seconds or so until golden brown.")
 
 
 const eggsToast = new Meal("Eggs and Toast", "Breakfast", "./images/eggs-toast.jpeg", ["Healthy", "Vegetarian"]);
 eggsToast.generateRecipe(2, "", "eggs");
 eggsToast.generateRecipe(2, "pieces of", "toast");
 eggsToast.generateRecipe(1, "pinch of", "salt and/or pepper");
-eggsToast.addInstructions(1, "Toast the bread.")
-eggsToast.addInstructions(2, "Crack eggs over a med-hot pan and cover with a lid for two minutes.")
-eggsToast.addInstructions(3, "Serve together when yolks are cooked as desired.")
+eggsToast.addInstructions("Toast the bread.");
+eggsToast.addInstructions("Crack eggs over a med-hot pan and cover with a lid for two minutes.");
+eggsToast.addInstructions("Serve together when yolks are cooked as desired.");
 
 const breakfastQuiche = new Meal("Crustless Breakfast Quiche", "Breakfast", "./images/breakfast-quiche.jpeg", ["Gluten-Free", "Vegetarian"]);
-// breakfastQuiche.generateRecipe()
+breakfastQuiche.generateRecipe("3", "", "eggs");
+breakfastQuiche.generateRecipe("1", "cup", "mushrooms");
+breakfastQuiche.generateRecipe("1", "cup", "shredded cheese");
+breakfastQuiche.generateRecipe("1", "cup", "heavy cream");
+breakfastQuiche.generateRecipe("", "", "salt");
+breakfastQuiche.generateRecipe("", "", "pepper");
+breakfastQuiche.addInstructions("In a bowl, beat the eggs with the spices.");
+breakfastQuiche.addInstructions("Add all the ingredits into a pie dish or pan.");
+breakfastQuiche.addInstructions("Bake at 375F for 30 minutes.");
+
 
 const crepes = new Meal("Crepes", "Breakfast", "./images/crepes.jpeg", ["Vegetarian"]);
+crepes.generateRecipe("1", "cup", "flour");
+crepes.generateRecipe("2", "", "eggs");
+crepes.generateRecipe("1", "cup", "milk");
+crepes.generateRecipe("3", "tbsp", "butter");
+crepes.generateRecipe("1/4", "cup", "water");
+crepes.generateRecipe("1/2", "tsp", "salt");
+crepes.addInstructions("In a bowl, mix all the ingredients together until smooth.")
+crepes.addInstructions("Heat a pan to med-hot and oil lightly before cooking each crepe.")
+crepes.addInstructions("Pour the batter and tilt the pan until the crepe has spread.")
+crepes.addInstructions("Flip crepes every 30 seconds or so until golden-brown.")
 
 const loxBagel = new Meal("Lox Bagel", "Breakfast", "./images/lox-bagel.jpeg", []);
+loxBagel.generateRecipe("1", "", "bagel");
+loxBagel.generateRecipe("1", "tbsp", "cream cheese");
+loxBagel.generateRecipe("a few", "slices of", "smoked salmon");
+loxBagel.generateRecipe("a few", "slices of", "onions");
+loxBagel.generateRecipe("one", "slice of", "tomato");
+loxBagel.addInstructions("Cup the bagel in half and toast.")
+loxBagel.addInstructions("Put toppings onto the bagel and enjoy.")
 
 const omelette = new Meal("Omelette", "Breakfast", "./images/omelette.jpeg", ["Vegetarian", "Healthy", "Gluten-Free"]);
+omelette.generateRecipe("2", "", "eggs");
+omelette.generateRecipe("1", "", "green onion");
+omelette.generateRecipe("3", "", "mushrooms");
+omelette.generateRecipe("1/2", "", "tomato");
+omelette.generateRecipe("2", "tbsp", "shredded cheese");
+omelette.generateRecipe("1/2", "tsp", "salt");
+omelette.addInstructions("Beat eggs in a bowl and chop all the vegetables.")
+omelette.addInstructions("Over a medium heated pan, cook the vegetables with a bit of oil and salt.")
+omelette.addInstructions("Pour in the eggs, sprinkle on the cheese and cover the pan with a lid.")
+omelette.addInstructions("After two minutes, uncover, fold over and enjoy.")
 
 const shakshuka = new Meal("Shakshuka", "Breakfast", "./images/shakshuka.jpeg", ["Healthy", "Gluten-Free"]);
+
+// const avocadoTost = new Meal;
 
 // Lunch
 
 const salad = new Meal("Salad", "Lunch", "./images/salad.jpeg", ["Vegetarian", "Healthy", "Gluten-Free", "Vegan"]);
-salad.generateRecipe(1, "head", "lettuce");
+salad.generateRecipe(1, "cup", "lettuce");
 salad.generateRecipe(1, "", "tomato");
+salad.generateRecipe("quarter", "", "cucumber");
+salad.generateRecipe("4", "", "mushrooms");
+salad.generateRecipe("1", "tbsp", "goat cheese");
+salad.generateRecipe("1", "tbsp", "sliced almonds");
+salad.generateRecipe("1", "tbsp", "cranberries");
+salad.generateRecipe("1", "tsp", "dressing");
+salad.addInstructions("Chop all vegetables as desired.")
+salad.addInstructions("Mix together throughly and enjoy.")
 
 const avocadoSandwich = new Meal("Avocado Sandwich", "Lunch", "./images/avocado-sandwich.jpeg", ["Vegetarian", "Healthy"]);
 

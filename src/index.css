@@ -238,8 +238,18 @@
   display: flex;
 }
 
-.recipe p {
-  margin-left: 5px;
+.recipe-map p {
+  margin: 0 0 10px 5px;
+}
+
+.instructions li {
+  list-style:decimal;
+  margin: 0 0 5px 0;
+}
+
+.instructions {
+  height: 180px;
+  overflow:hidden;
 }
 
 .recipe input {
@@ -247,7 +257,7 @@
 }
 
 .recipe .back button {
-  margin: 15px auto;
+  margin: 35px auto;
 }
 
 /* Search Page */
