@@ -207,6 +207,14 @@ function Recipe({selectedMeal, back}) {
           </div>
           )
         }
+        <div className="instructions">
+          <ol> 
+            {selectedMeal.instructions.map(item => 
+              <li>{item}</li>
+              )
+            }
+          </ol>
+        </div>
       </div>
       <div className="back">
         <button onClick={back}>Back to Main Menu</button>
@@ -248,7 +256,7 @@ function SearchRecipes ({back, selectedMeal}) {
     <div className="search-recipes">
 
       <div className="search-bar">
-        <input type="search" placeholder="Search Recipes" value={searchTerm} onChange={event => setSearchTerm(event.target.value)}></input>
+        <input type="search" placeholder="Search Recipe, Type, Ingredient" value={searchTerm} onChange={event => setSearchTerm(event.target.value)}></input>
       </div>
 
       <div className="search-results">
