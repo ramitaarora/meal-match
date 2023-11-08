@@ -21,7 +21,7 @@ If users would rather search, they can click the magnifying glass icon in the co
 
 This project has been deployed at: https://ramitaarora.github.io/meal-match/
 
-<img src="./public/images/meal-match-screenshot.png" alt="screenshot"/>
+<img src="./public/images/meal-match-screenshot.png" height=500px alt="screenshot"/>
 
 ## Credits
 
