@@ -118,8 +118,28 @@ omelette.addInstructions("Pour in the eggs, sprinkle on the cheese and cover the
 omelette.addInstructions("After two minutes, uncover, fold over and enjoy.")
 
 const shakshuka = new Meal("Shakshuka", "Breakfast", "./images/shakshuka.jpeg", ["Healthy", "Gluten-Free"]);
+shakshuka.generateRecipe("1", "", "onion");
+shakshuka.generateRecipe("1", "", "red bell pepper");
+shakshuka.generateRecipe("4", "", "garlic cloves");
+shakshuka.generateRecipe("1", "can", "peeled tomatoes");
+shakshuka.generateRecipe("6", "", "eggs");
+shakshuka.generateRecipe("2", "tsp", "paprika");
+shakshuka.generateRecipe("1", "tsp", "cumin powder");
+shakshuka.generateRecipe("", "", "salt and pepper");
+shakshuka.addInstructions("In a heated pan, saute chopped onions and bell pepper until onion becomes translucent.")
+shakshuka.addInstructions("Add garlic, spices and peeled tomatoes. Break down the tomatoes with a spatula and bring the sauce to a simmer.")
+shakshuka.addInstructions("Make small wells in the sauce and add each egg into a well. Cover the pan and cook for 5-8 minutes.")
 
-// const avocadoTost = new Meal;
+const avocadoToast = new Meal("Avocado Toast", "Breakfast", "./images/avocado-toast.jpeg", ["Healthy", "Vegetarian", "Vegan"]);
+avocadoToast.generateRecipe("1", "slice", "bread");
+avocadoToast.generateRecipe("1/2", "", "avocado");
+avocadoToast.generateRecipe("1/2", "tsp", "lemon juice");
+avocadoToast.generateRecipe("", "", "salt and pepper");
+avocadoToast.generateRecipe("", "", "(optional) egg");
+avocadoToast.addInstructions("Mash avocado, lemon juice, salt and pepper in a bowl.")
+avocadoToast.addInstructions("Toast bread or heat over a pan with a drizzle of olive oil.")
+avocadoToast.addInstructions("Spread avocado mixture on top of toast.")
+avocadoToast.addInstructions("(Optional) Cook egg to your liking (scrambled, boiled, etc.) and put on top of the avocado toast.")
 
 // Lunch
 
@@ -136,14 +156,30 @@ salad.addInstructions("Chop all vegetables as desired.")
 salad.addInstructions("Mix together throughly and enjoy.")
 
 const avocadoSandwich = new Meal("Avocado Sandwich", "Lunch", "./images/avocado-sandwich.jpeg", ["Vegetarian", "Healthy"]);
+avocadoSandwich.generateRecipe("2", "slices of", "bread");
+avocadoSandwich.generateRecipe("1/2", "", "avocado");
+avocadoSandwich.generateRecipe("1/2", "tsp", "lemon juice");
+avocadoSandwich.generateRecipe("", "", "salt and pepper");
+avocadoSandwich.generateRecipe("", "", "cheese");
+avocadoSandwich.generateRecipe("3", "slices of", "cucumber");
+avocadoSandwich.generateRecipe("1", "slice of", "tomato");
+avocadoSandwich.addInstructions("Mash avocado with lemon juice, salt, pepper and any other spices desired.")
+avocadoSandwich.addInstructions("Toast bread and add avocado mixture, cheese, cucumbers and tomatoes to bread. Put together and enjoy.")
 
 const lentilSoup = new Meal("Lentil Soup", "Lunch", "./images/lentil-soup.jpeg", ["Gluten-Free", "Healthy", "Vegetarian", "Vegan"]);
+
 
 const pumpkinSoup = new Meal("Pumpkin Soup", "Lunch", "./images/pumpkin-soup.jpeg", ["Healthy", "Gluten-Free", "Vegetarian", "Vegan"]);
 
 const ramen = new Meal("Ramen", "Lunch", "./images/ramen.jpeg", []);
 
 const grilledChickenSandwich = new Meal("Grilled Chicken Sandwich", "Lunch", "./images/chicken-sandwich.jpeg", ["Healthy"]);
+grilledChickenSandwich.generateRecipe("2", "slices of", "bread");
+grilledChickenSandwich.generateRecipe("1/4", "lb", "chicken");
+grilledChickenSandwich.generateRecipe("", "", "salt and pepper");
+grilledChickenSandwich.generateRecipe("", "", "cheese");
+grilledChickenSandwich.generateRecipe("3", "slices of", "cucumber");
+grilledChickenSandwich.generateRecipe("1", "slice of", "tomato");
 
 const spinachChicken = new Meal("Spinach Chicken", "Lunch", "./images/spinach-chicken.jpeg", ["Healthy", "Gluten-Free"]);
 
@@ -225,6 +261,6 @@ const lemonade = new Meal("Lemonade", "Drinks", "./images/lemonade.jpeg", ["Vege
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
 const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
 
-const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, pumpkinSoup, ramen, salmon, grilledChickenSandwich, shakshuka, spinachChicken, sushi, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade];
+const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, pumpkinSoup, ramen, salmon, grilledChickenSandwich, shakshuka, spinachChicken, sushi, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
 
 export {Meal, allMeals, mealTypes, mealOptions};
