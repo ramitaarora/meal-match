@@ -167,11 +167,40 @@ avocadoSandwich.addInstructions("Mash avocado with lemon juice, salt, pepper and
 avocadoSandwich.addInstructions("Toast bread and add avocado mixture, cheese, cucumbers and tomatoes to bread. Put together and enjoy.")
 
 const lentilSoup = new Meal("Lentil Soup", "Lunch", "./images/lentil-soup.jpeg", ["Gluten-Free", "Healthy", "Vegetarian", "Vegan"]);
-
+lentilSoup.generateRecipe("1/2", "", "onion");
+lentilSoup.generateRecipe("1", "clove", "garlic");
+lentilSoup.generateRecipe("1/2", "", "carrot");
+lentilSoup.generateRecipe("1", "", "celery");
+lentilSoup.generateRecipe("1", "dried", "bay leaf");
+lentilSoup.generateRecipe("1", "cup", "crushed tomato");
+lentilSoup.generateRecipe("1/4", "tsp", "cumin powder");
+lentilSoup.generateRecipe("1/2", "tsp", "paprika");
+lentilSoup.generateRecipe("1/2", "", "lemon");
+lentilSoup.generateRecipe("", "", "salt and pepper");
+lentilSoup.generateRecipe("3", "cups", "broth");
+lentilSoup.generateRecipe("1", "can", "lentils");
+lentilSoup.addInstructions("Heat oil in a large pot. Add garlic and onion and cook until onion is transparent.")
+lentilSoup.addInstructions("Add peeled and chopped carrots ans celery. Cook until softened.")
+lentilSoup.addInstructions("Add the remaining ingredients except lentils. Bring to a simmer for 15 minutes and stir often.")
+lentilSoup.addInstructions("Add the lentils and simmar for another 15 minutes.")
 
 const pumpkinSoup = new Meal("Pumpkin Soup", "Lunch", "./images/pumpkin-soup.jpeg", ["Healthy", "Gluten-Free", "Vegetarian", "Vegan"]);
+pumpkinSoup.generateRecipe("1", "", "sugar pie pumpkin");
+pumpkinSoup.generateRecipe("4", "cups", "broth");
+pumpkinSoup.generateRecipe("1", "", "onion");
+pumpkinSoup.generateRecipe("4", "cloves", "garlic");
+pumpkinSoup.generateRecipe("1/2", "cup", "coconut milk");
+pumpkinSoup.generateRecipe("1/2", "tsp", "ground cinnamon");
+pumpkinSoup.generateRecipe("1/2", "tsp", "ground nutmeg");
+pumpkinSoup.generateRecipe("", "", "salt and pepper");
+pumpkinSoup.generateRecipe("2", "tbsp", "maple syrup");
+pumpkinSoup.addInstructions("Halve the pumpkin and scoop out all the seeds. Bake in a 425 degrees Farenheit oven for 35 minutes until pumpkin flesh is soft.")
+pumpkinSoup.addInstructions("Cook chopped onions and garlic in a medium-hot pot until onion is translucent.")
+pumpkinSoup.addInstructions("Add pumpkin flesh, cinnamon, nutmeg, salt and pepper and broth to the pot. Bring to a boil and summer for 15 minutes.")
+pumpkinSoup.addInstructions("Stir in coconut milk and maple syrup before letting it cool. Once cooled, use a blender to blend the soup.")
 
-const ramen = new Meal("Ramen", "Lunch", "./images/ramen.jpeg", []);
+// const ramen = new Meal("Ramen", "Lunch", "./images/ramen.jpeg", []);
+
 
 const grilledChickenSandwich = new Meal("Grilled Chicken Sandwich", "Lunch", "./images/chicken-sandwich.jpeg", ["Healthy"]);
 grilledChickenSandwich.generateRecipe("2", "slices of", "bread");
@@ -180,8 +209,19 @@ grilledChickenSandwich.generateRecipe("", "", "salt and pepper");
 grilledChickenSandwich.generateRecipe("", "", "cheese");
 grilledChickenSandwich.generateRecipe("3", "slices of", "cucumber");
 grilledChickenSandwich.generateRecipe("1", "slice of", "tomato");
+grilledChickenSandwich.addInstructions("Chop chicken and cook in a pan over high heat. Turn regularly.")
+grilledChickenSandwich.addInstructions("Toast bread and combine other ingredients on top of bread while chicken cooks.")
+grilledChickenSandwich.addInstructions("Add chicken to sandwich and top off with any other toppings or sauces.")
 
-const spinachChicken = new Meal("Spinach Chicken", "Lunch", "./images/spinach-chicken.jpeg", ["Healthy", "Gluten-Free"]);
+const spinachChicken = new Meal("Spinach Chicken Salad", "Lunch", "./images/spinach-chicken.jpeg", ["Healthy", "Gluten-Free"]);
+spinachChicken.generateRecipe("2", "cups", "spinach");
+spinachChicken.generateRecipe("1", "", "chicken breast");
+spinachChicken.generateRecipe("1/4", "cup", "pomegranate seeds");
+spinachChicken.generateRecipe("2", "tbsp", "goat cheese");
+spinachChicken.generateRecipe("2", "tbsp", "sliced almonds");
+spinachChicken.addInstructions("Chop chicken and cook in a pan over high heat. Turn regularly.");
+spinachChicken.addInstructions("Add spinach, pomegranate, goat cheese and almonds to a bowl while chicken cooks.")
+spinachChicken.addInstructions("Add chicken to salad and enjoy.")
 
 // Dinner
 
@@ -261,6 +301,6 @@ const lemonade = new Meal("Lemonade", "Drinks", "./images/lemonade.jpeg", ["Vege
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
 const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
 
-const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, pumpkinSoup, ramen, salmon, grilledChickenSandwich, shakshuka, spinachChicken, sushi, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
+const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, pumpkinSoup, salmon, grilledChickenSandwich, shakshuka, spinachChicken, sushi, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
 
 export {Meal, allMeals, mealTypes, mealOptions};
