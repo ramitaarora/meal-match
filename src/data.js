@@ -199,9 +199,6 @@ pumpkinSoup.addInstructions("Cook chopped onions and garlic in a medium-hot pot 
 pumpkinSoup.addInstructions("Add pumpkin flesh, cinnamon, nutmeg, salt and pepper and broth to the pot. Bring to a boil and summer for 15 minutes.")
 pumpkinSoup.addInstructions("Stir in coconut milk and maple syrup before letting it cool. Once cooled, use a blender to blend the soup.")
 
-// const ramen = new Meal("Ramen", "Lunch", "./images/ramen.jpeg", []);
-
-
 const grilledChickenSandwich = new Meal("Grilled Chicken Sandwich", "Lunch", "./images/chicken-sandwich.jpeg", ["Healthy"]);
 grilledChickenSandwich.generateRecipe("2", "slices of", "bread");
 grilledChickenSandwich.generateRecipe("1/4", "lb", "chicken");
@@ -226,28 +223,60 @@ spinachChicken.addInstructions("Add chicken to salad and enjoy.")
 // Dinner
 
 const butterChicken = new Meal("Butter Chicken", "Dinner", "./images/butter-chicken.jpg", ["Gluten-Free"]);
-butterChicken.generateRecipe(1, "", "chicken breast");
-butterChicken.generateRecipe(1, "", "tomato");
+butterChicken.generateRecipe(1, "", "chicken breast/thighs");
+butterChicken.generateRecipe(1, "", "roma tomato");
+butterChicken.generateRecipe(2, "tbsp", "tomato paste/sauce");
 butterChicken.generateRecipe(2, "cloves", "garlic");
 butterChicken.generateRecipe(0.5, "", "onion");
 butterChicken.generateRecipe(1, "tsp", "butter chicken masala");
+butterChicken.generateRecipe(2, "tbsp", "yogurt");
+butterChicken.addInstructions("In a hot wok, cook grated garlic and chopped onions in oil until onions are transparent.")
+butterChicken.addInstructions("Add chopped roma tomatoes, tomato paste/sauce and butter chicken masala until tomatoes are soft and the mixture comes together.")
+butterChicken.addInstructions("Add chopped chicken breast or thighs into the wok and top with yogurt. Add water until chicken is just submerged.")
+butterChicken.addInstructions("Boil, then simmer until chicken is thoroughly cooked.")
 
 const tacos = new Meal("Tacos", "Dinner", "./images/tacos.jpeg", ["Vegetarian"])
 tacos.generateRecipe("", "", "taco shells");
-tacos.generateRecipe("", "", "meat of choice");
-tacos.generateRecipe("", "", "lettuce");
+tacos.generateRecipe("", "", "meat of choice (optional)");
+tacos.generateRecipe("", "", "chopped lettuce");
 tacos.generateRecipe("", "", "refried beans");
 tacos.generateRecipe("", "", "cheese");
+tacos.generateRecipe("", "", "(sides) salsa, guacamole, sour cream");
+tacos.addInstructions("If using meat, cook meat as desired and add taco seasoning when cooked.")
+tacos.addInstructions("Heat refried beans in a pan until hot.")
+tacos.addInstructions("Add meat (optional), refried beans, chopped lettuce and cheese to taco shells.")
+tacos.addInstructions("Enjoy with salsa, guacamole or sour cream.")
 
 const burger = new Meal("Burger", "Dinner", "./images/burger.jpeg", []);
-burger.generateRecipe(1, "", "patty");
+burger.generateRecipe(1, "", "burger patty");
 burger.generateRecipe("", "", "buns");
 burger.generateRecipe(1, "slice", "onion");
 burger.generateRecipe(1, "slice", "tomato");
 burger.generateRecipe(1, "slice", "cheese");
 burger.generateRecipe("", "", "lettuce");
+burger.addInstructions("In a hot pan, sear burger patty and cook as desired.")
+burger.addInstructions("Toast burger bun for 2 minutes.")
+burger.addInstructions("Add slices of onion, tomato and cheese in the burger bun. Place burger patty on top of cheese for melting.")
+burger.addInstructions("Add ketchup, mustard or any other condiments as desired.")
 
 const biriyani = new Meal("Biriyani", "Dinner", "./images/biryani.jpeg", ["Gluten-Free"]);
+biriyani.generateRecipe(1, "cup", "rice");
+biriyani.generateRecipe(1, "lb", "chicken thighs");
+biriyani.generateRecipe(2, "tsp", "biriyani masala");
+biriyani.generateRecipe(2, "cloves of", "garlic");
+biriyani.generateRecipe("1/2", "", "onion");
+biriyani.generateRecipe(1, "", "roma tomato");
+biriyani.generateRecipe(1, "tbsp", "tomato pasta or sauce");
+biriyani.generateRecipe("1/2", "tsp", "cumin seeds");
+biriyani.generateRecipe("1/2", "tsp", "mustard seeds");
+biriyani.generateRecipe("1", "tsp", "saffron");
+biriyani.addInstructions("Cook one cup of rice with two cups of water as chicken cooks. Add saffron to rice (optional).")
+biriyani.addInstructions("In a medium hot wok, add cumin seeds and mustard seeds to oil.")
+biriyani.addInstructions("Add grated garlic and chopped onions in oil until onions are transparent.")
+biriyani.addInstructions("Add chopped roma tomatoes, tomato paste/sauce and biriyani masala until tomatoes are soft and the mixture comes together.")
+biriyani.addInstructions("Add chopped chicken thighs into the wok and top with yogurt. Add water until chicken is just submerged.")
+biriyani.addInstructions("Boil, then simmer for twenty minutes.")
+biriyani.addInstructions("Add rice evenly on top of chicken, patting it on top to seal. Cover with a lid until serving.")
 
 const pasta = new Meal("Pasta", "Dinner", "./images/pasta.jpeg", ["Vegetarian", "Vegan"]);
 
@@ -255,7 +284,6 @@ const pizza = new Meal("Pizza", "Dinner", "./images/pizza.jpeg", ["Vegetarian"])
 
 const salmon = new Meal("Salmon", "Dinner", "./images/salmon.jpeg", ["Healthy", "Gluten-Free"]);
 
-const sushi = new Meal("Sushi", "Dinner", "./images/sushi.jpeg", []);
 
 // Snacks
 
@@ -301,6 +329,6 @@ const lemonade = new Meal("Lemonade", "Drinks", "./images/lemonade.jpeg", ["Vege
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
 const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
 
-const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, pumpkinSoup, salmon, grilledChickenSandwich, shakshuka, spinachChicken, sushi, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
+const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, pumpkinSoup, salmon, grilledChickenSandwich, shakshuka, spinachChicken, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
 
 export {Meal, allMeals, mealTypes, mealOptions};
