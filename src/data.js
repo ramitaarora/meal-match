@@ -279,11 +279,47 @@ biriyani.addInstructions("Boil, then simmer for twenty minutes.")
 biriyani.addInstructions("Add rice evenly on top of chicken, patting it on top to seal. Cover with a lid until serving.")
 
 const pasta = new Meal("Pasta", "Dinner", "./images/pasta.jpeg", ["Vegetarian", "Vegan"]);
+pasta.generateRecipe(1, "cup", "pasta");
+pasta.generateRecipe("1/2", "cup", "pasta sauce");
+pasta.generateRecipe(2, "cloves of", "garlic");
+pasta.generateRecipe("1/2", "", "onion");
+pasta.generateRecipe(8, "", "mushrooms");
+pasta.addInstructions("Bring a pot of water to a boil before adding the pasta in. Cook according to box instructions.")
+pasta.addInstructions("Chop onions, garlic, mushrooms and any other vegetables desired.")
+pasta.addInstructions("Cook all vegetables on medium heat with salt until onions are translucent.")
+pasta.addInstructions("When pasta is al dente, add to vegetables and add in the sauce.")
+pasta.addInstructions("Cook just until sauce bubbles then serve.")
 
 const pizza = new Meal("Pizza", "Dinner", "./images/pizza.jpeg", ["Vegetarian"]);
+pizza.generateRecipe(1, "cup", "pizza dough");
+pizza.generateRecipe("1/2", "cup", "pizza sauce");
+pizza.generateRecipe(2, "cloves of", "garlic");
+pizza.generateRecipe("1/2", "", "onion");
+pizza.generateRecipe(8, "", "mushrooms");
+pizza.addInstructions("Preheat your oven to the temperature specified on the pizza dough package.");
+pizza.addInstructions("Roll out the pizza dough on a floured surface to your desired thickness.");
+pizza.addInstructions("Spread pizza sauce evenly over the dough, leaving a small border around the edges.");
+pizza.addInstructions("Mince the garlic and sprinkle it over the sauce.");
+pizza.addInstructions("Thinly slice the onion and mushrooms, then distribute them over the pizza.");
+pizza.addInstructions("Bake the pizza in the preheated oven according to the pizza dough package instructions, or until the crust is golden and the toppings are cooked.");
+pizza.addInstructions("Remove from the oven and let it cool for a few minutes before slicing and serving.");
 
 const salmon = new Meal("Salmon", "Dinner", "./images/salmon.jpeg", ["Healthy", "Gluten-Free"]);
-
+salmon.generateRecipe(2, "", "salmon fillets")
+salmon.generateRecipe("1/2", "cup", "fresh basil leaves")
+salmon.generateRecipe("1/4", "cup", "pine nuts")
+salmon.generateRecipe("1/4", "cup", "grated Parmesan cheese")
+salmon.generateRecipe("1", "clove of", "garlic")
+salmon.generateRecipe("1/2", "cup", "extra-virgin olive oil")
+salmon.generateRecipe("1", "tablespoon", "lemon juice")
+salmon.generateRecipe("1/2", "teaspoon", "salt")
+salmon.generateRecipe("1/4", "teaspoon", "black pepper")
+salmon.addInstructions("Preheat your oven to 400°F.")
+salmon.addInstructions("Place the salmon fillets on a baking sheet lined with parchment paper.")
+salmon.addInstructions("In a food processor, combine fresh basil, pine nuts, Parmesan cheese, garlic, olive oil, lemon juice, salt, and black pepper. Blend until smooth to make the pesto sauce.")
+salmon.addInstructions("Spread a generous layer of pesto sauce over each salmon fillet, ensuring they are evenly coated.")
+salmon.addInstructions("Bake in the preheated oven for 12-15 minutes or until the salmon flakes easily with a fork.")
+salmon.addInstructions("Serve the pesto salmon fillets with your favorite side dishes, and enjoy!")
 
 // Snacks
 
