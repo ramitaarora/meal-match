@@ -220,6 +220,26 @@ spinachChicken.addInstructions("Chop chicken and cook in a pan over high heat. T
 spinachChicken.addInstructions("Add spinach, pomegranate, goat cheese and almonds to a bowl while chicken cooks.")
 spinachChicken.addInstructions("Add chicken to salad and enjoy.")
 
+const ramen = new Meal("Ramen", "Lunch", "./images/ramen.jpeg", ["Vegetarian"])
+ramen.generateRecipe("2", "packs", "ramen noodles")
+ramen.generateRecipe("4", "cups", "chicken or vegetable broth")
+ramen.generateRecipe("2", "cups", "sliced vegetables (e.g., bok choy, mushrooms, carrots)")
+ramen.generateRecipe("1/2", "cup", "sliced green onions")
+ramen.generateRecipe("2", "cloves of", "garlic, minced")
+ramen.generateRecipe("1", "tbsp", "soy sauce")
+ramen.generateRecipe("1", "tbsp", "sesame oil")
+ramen.generateRecipe("1", "tsp", "grated ginger")
+ramen.generateRecipe("2", "soft-boiled", "eggs (optional)")
+ramen.generateRecipe("1/4", "cup", "tofu")
+ramen.generateRecipe("", "", "sriracha or chili oil (optional)")
+ramen.addInstructions("Cook the ramen noodles according to the package instructions. Drain and set aside.")
+ramen.addInstructions("In a large pot, bring the chicken or vegetable broth to a simmer.")
+ramen.addInstructions("Add sliced vegetables, green onions, minced garlic, soy sauce, sesame oil, and grated ginger to the simmering broth. Cook until the vegetables are tender.")
+ramen.addInstructions("Divide the cooked ramen noodles among serving bowls.")
+ramen.addInstructions("Ladle the hot broth and vegetables over the noodles.")
+ramen.addInstructions("Optional: Top each bowl with a soft-boiled egg (optional), tofu, sliced green onions, and a drizzle of Sriracha or chili oil for extra flavor.")
+ramen.addInstructions("Serve immediately and enjoy your homemade ramen!")
+
 // Dinner
 
 const butterChicken = new Meal("Butter Chicken", "Dinner", "./images/butter-chicken.jpg", ["Gluten-Free"]);
@@ -288,7 +308,7 @@ pasta.addInstructions("Bring a pot of water to a boil before adding the pasta in
 pasta.addInstructions("Chop onions, garlic, mushrooms and any other vegetables desired.")
 pasta.addInstructions("Cook all vegetables on medium heat with salt until onions are translucent.")
 pasta.addInstructions("When pasta is al dente, add to vegetables and add in the sauce.")
-pasta.addInstructions("Cook just until sauce bubbles then serve.")
+pasta.addInstructions("Cook just until the sauce bubbles then serve.")
 
 const pizza = new Meal("Pizza", "Dinner", "./images/pizza.jpeg", ["Vegetarian"]);
 pizza.generateRecipe(1, "cup", "pizza dough");
@@ -301,7 +321,7 @@ pizza.addInstructions("Roll out the pizza dough on a floured surface to your des
 pizza.addInstructions("Spread pizza sauce evenly over the dough, leaving a small border around the edges.");
 pizza.addInstructions("Mince the garlic and sprinkle it over the sauce.");
 pizza.addInstructions("Thinly slice the onion and mushrooms, then distribute them over the pizza.");
-pizza.addInstructions("Bake the pizza in the preheated oven according to the pizza dough package instructions, or until the crust is golden and the toppings are cooked.");
+pizza.addInstructions("Bake the pizza in the preheated oven until the crust is golden and the toppings are cooked.");
 pizza.addInstructions("Remove from the oven and let it cool for a few minutes before slicing and serving.");
 
 const salmon = new Meal("Salmon", "Dinner", "./images/salmon.jpeg", ["Healthy", "Gluten-Free"]);
@@ -311,15 +331,35 @@ salmon.generateRecipe("1/4", "cup", "pine nuts")
 salmon.generateRecipe("1/4", "cup", "grated Parmesan cheese")
 salmon.generateRecipe("1", "clove of", "garlic")
 salmon.generateRecipe("1/2", "cup", "extra-virgin olive oil")
-salmon.generateRecipe("1", "tablespoon", "lemon juice")
-salmon.generateRecipe("1/2", "teaspoon", "salt")
-salmon.generateRecipe("1/4", "teaspoon", "black pepper")
+salmon.generateRecipe("1", "tbsp", "lemon juice")
+salmon.generateRecipe("1/2", "tsp", "salt")
+salmon.generateRecipe("1/4", "tsp", "black pepper")
 salmon.addInstructions("Preheat your oven to 400°F.")
 salmon.addInstructions("Place the salmon fillets on a baking sheet lined with parchment paper.")
 salmon.addInstructions("In a food processor, combine fresh basil, pine nuts, Parmesan cheese, garlic, olive oil, lemon juice, salt, and black pepper. Blend until smooth to make the pesto sauce.")
 salmon.addInstructions("Spread a generous layer of pesto sauce over each salmon fillet, ensuring they are evenly coated.")
 salmon.addInstructions("Bake in the preheated oven for 12-15 minutes or until the salmon flakes easily with a fork.")
-salmon.addInstructions("Serve the pesto salmon fillets with your favorite side dishes, and enjoy!")
+
+const sushi = new Meal("Sushi", "Dinner", "./images/sushi.jpeg", ["Healthy", "Gluten-Free"]);
+sushi.generateRecipe("2", "cups", "sushi rice")
+sushi.generateRecipe("1/4", "cup", "rice vinegar")
+sushi.generateRecipe("1", "tbsp", "sugar")
+sushi.generateRecipe("1/2", "tsp", "salt")
+sushi.generateRecipe("5-6", "sheets", "nori (seaweed)")
+sushi.generateRecipe("1", "", "avocado, sliced")
+sushi.generateRecipe("1/2", "cup", "imitation crab or cooked crab meat, shredded")
+sushi.generateRecipe("1/2", "", "cucumber, julienned")
+sushi.generateRecipe("", "", "soy sauce, pickled ginger and wasabi (on the side)")
+sushi.addInstructions("Rinse the sushi rice under cold water until the water runs clear. Cook the rice according to package instructions.")
+sushi.addInstructions("While the rice is still warm, mix it with rice vinegar, sugar, and salt. Let it cool to room temperature.")
+sushi.addInstructions("Place a bamboo sushi rolling mat on a flat surface. Put a sheet of plastic wrap on the mat.")
+sushi.addInstructions("Place a sheet of nori, shiny side down, on the plastic wrap.")
+sushi.addInstructions("With wet hands, spread a thin layer of prepared sushi rice over the nori, leaving a small border at the top.")
+sushi.addInstructions("Arrange slices of avocado, shredded crab, and julienned cucumber in the center of the rice.")
+sushi.addInstructions("Using the bamboo mat, roll the sushi tightly from the bottom, applying gentle pressure.")
+sushi.addInstructions("Seal the edge with a bit of water. Slice the sushi roll into bite-sized pieces using a sharp, wet knife.")
+sushi.addInstructions("Repeat the process with the remaining ingredients.")
+sushi.addInstructions("Serve the sushi rolls with soy sauce, pickled ginger, and wasabi.")
 
 // Snacks
 
@@ -336,12 +376,43 @@ const peanutButterToast = new Meal("Peanut Butter Toast", "Snacks", "./images/pb
 // Desserts
 
 const brownies = new Meal("Brownies", "Dessert", "./images/brownies.jpeg", []);
-brownies.generateRecipe(1, "cup", "flour");
-brownies.generateRecipe(0.5, "cup", "sugar");
+brownies.generateRecipe("1", "cup", "unsalted butter")
+brownies.generateRecipe("2", "cups", "granulated sugar")
+brownies.generateRecipe("4", "large", "eggs")
+brownies.generateRecipe("1", "tsp", "vanilla extract")
+brownies.generateRecipe("1/2", "cup", "all-purpose flour")
+brownies.generateRecipe("1/2", "cup", "unsweetened cocoa powder")
+brownies.generateRecipe("1/4", "tsp", "salt")
+brownies.generateRecipe("1", "cup", "chopped nuts (optional)")
+brownies.generateRecipe("1", "cup", "chocolate chips or chunks")
+brownies.addInstructions("Preheat your oven to 350°F (175°C) and grease a baking pan.")
+brownies.addInstructions("In a saucepan, melt the unsalted butter over low heat. Remove from heat and let it cool slightly.")
+brownies.addInstructions("In a large mixing bowl, combine the melted butter and granulated sugar. Mix well.")
+brownies.addInstructions("Add the eggs one at a time, beating well after each addition. Stir in the vanilla extract.")
+brownies.addInstructions("In a separate bowl, sift together the all-purpose flour, unsweetened cocoa powder, and salt.")
+brownies.addInstructions("Gradually add the dry ingredients to the wet ingredients, mixing until just combined.")
+brownies.addInstructions("If desired, fold in chopped nuts and chocolate chips or chunks.")
+brownies.addInstructions("Pour the batter into the prepared baking pan and spread it evenly.")
+brownies.addInstructions("Bake in the preheated oven for 25-30 minutes or until a toothpick inserted into the center comes out with moist crumbs (not wet batter).")
+brownies.addInstructions("Allow the brownies to cool in the pan before cutting them into squares.")
 
 const iceCream = new Meal("Ice Cream", "Dessert", "./images/ice-cream.jpeg", []);
+iceCream.generateRecipe("1", "cup", "ice cream of choice");
+iceCream.generateRecipe("", "", "toppings");
+iceCream.addInstructions("Add toppings to ice cream or enjoy by itself!");
 
 const affogato = new Meal("Affogato", "Dessert", "./images/affogato.jpeg", [])
+affogato.generateRecipe("1", "scoop", "vanilla ice cream")
+affogato.generateRecipe("1-2", "shots", "hot espresso")
+affogato.generateRecipe("1", "tsp", "chocolate shavings (optional)")
+affogato.generateRecipe("1", "tsp", "chopped nuts (optional)")
+affogato.generateRecipe("1", "tsp", "caramel sauce (optional)")
+affogato.addInstructions("Place a scoop of vanilla ice cream in a serving glass or bowl.")
+affogato.addInstructions("Prepare 1-2 shots of hot espresso using your preferred method.")
+affogato.addInstructions("Pour the hot espresso over the vanilla ice cream.")
+affogato.addInstructions("Optional: Sprinkle chocolate shavings and chopped nuts over the affogato.")
+affogato.addInstructions("Optional: Drizzle caramel sauce on top for extra flavor.")
+affogato.addInstructions("Serve immediately while the espresso is hot and the ice cream is melting.")
 
 // Drinks
 
@@ -365,6 +436,6 @@ const lemonade = new Meal("Lemonade", "Drinks", "./images/lemonade.jpeg", ["Vege
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
 const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
 
-const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, pumpkinSoup, salmon, grilledChickenSandwich, shakshuka, spinachChicken, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
+const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, ramen, pumpkinSoup, salmon, grilledChickenSandwich, sushi, shakshuka, spinachChicken, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
 
 export {Meal, allMeals, mealTypes, mealOptions};
