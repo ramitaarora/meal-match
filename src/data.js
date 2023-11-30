@@ -366,12 +366,39 @@ sushi.addInstructions("Serve the sushi rolls with soy sauce, pickled ginger, and
 const applesPB = new Meal("Apples and Peanut Butter", "Snacks", "./images/apples-peanut-butter.jpeg", ["Vegetarian", "Gluten-Free", "Healthy"]);
 applesPB.generateRecipe(1, "whole", "apple");
 applesPB.generateRecipe(1, "tbsp", "peanut butter");
+applesPB.addInstructions("Cut apple into slices. Enjoy by dipping into peanut butter.")
 
 const breadCheese = new Meal("Bread, Cheese & Meat", "Snacks", "./images/bread-cheese-snack.jpeg", ["Healthy"]);
+breadCheese.generateRecipe(1, "slice", "bread");
+breadCheese.generateRecipe(1, "slice", "deli meat of choice");
+breadCheese.generateRecipe(1, "slice", "cheese");
+breadCheese.addInstructions("Toast bread and enjoy with cheese, deli meat and any other toppings desired.")
 
 const charcuterieBoard = new Meal("Charcuterie Board", "Snacks", "./images/charcuterie-board.jpeg", ["Healthy"]);
+charcuterie_board.generateRecipe("", "Assorted", "cheeses (e.g., brie, cheddar, gouda, blue cheese)")
+charcuterie_board.generateRecipe("", "Assorted", "cured meats (e.g., prosciutto, salami, chorizo)")
+charcuterie_board.generateRecipe("1", "cup", "mixed nuts")
+charcuterie_board.generateRecipe("1", "cup", "dried fruits (e.g., apricots, figs, dates)")
+charcuterie_board.generateRecipe("1", "cup", "olives (assorted varieties)")
+charcuterie_board.generateRecipe("1/2", "cup", "whole grain mustard")
+charcuterie_board.generateRecipe("1/2", "cup", "fruit preserves (e.g., fig or apricot)")
+charcuterie_board.generateRecipe("1", "", "baguette, sliced")
+charcuterie_board.generateRecipe("", "Fresh", "fruit (e.g., grapes, apple slices)")
+charcuterie_board.generateRecipe("", "", "Honey, for drizzling")
+charcuterie_board.generateRecipe("1", "sprig", "rosemary (for garnish, optional)")
+charcuterie_board.addInstructions("Start by selecting a large wooden board or platter as the base for your charcuterie board.")
+charcuterie_board.addInstructions("Arrange the assorted cheeses and cured meats on the board, creating visually appealing groupings.")
+charcuterie_board.addInstructions("Fill small bowls with mixed nuts, dried fruits, and olives, distributing them evenly around the board.")
+charcuterie_board.addInstructions("Place whole grain mustard and fruit preserves in small serving dishes for dipping.")
+charcuterie_board.addInstructions("Add slices of baguette to the board, placing them near the cheeses and meats.")
+charcuterie_board.addInstructions("Fill any remaining spaces on the board with fresh fruit, such as grapes or apple slices.")
+charcuterie_board.addInstructions("Drizzle honey over certain cheeses for added sweetness.")
+charcuterie_board.addInstructions("Optional: Garnish with a sprig of rosemary for a decorative touch.")
 
 const peanutButterToast = new Meal("Peanut Butter Toast", "Snacks", "./images/pb-toast.jpeg", ["Vegetarian", "Vegan"]);
+peanutButterToast.generateRecipe("", "", "peanut butter");
+peanutButterToast.generateRecipe(1, "slice", "bread");
+peanutButterToast.addInstructions("Toast the bread and spread peanut butter on top.")
 
 // Desserts
 
@@ -417,25 +444,122 @@ affogato.addInstructions("Serve immediately while the espresso is hot and the ic
 // Drinks
 
 const tea = new Meal("Tea", "Drinks", "./images/tea.jpeg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+tea.generateRecipe(1, "tsp", "tea leaves or tea bag");
+tea.addInstructions("Boil water, pour into a mug and add teabag or tea leaves to the mug.")
+tea.addInstructions("Add milk, sugar or honey as desired once tea is finished brewing.")
 
 const coffee = new Meal("Coffee", "Drinks", "./images/coffee.jpeg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+coffee.generateRecipe(1, "tbsp", "coffee beans")
+coffee.addInstructions("Grind the coffee, pick the size of grind according to coffee machine.")
+coffee.addInstructions("Add coffee grounds to coffee machine. Enjoy coffee with milk, cream, sugar, cinnamon and more.")
 
 const cappucino = new Meal("Cappucino", "Drinks", "./images/cappucino.jpeg", ["Vegetarian", "Healthy", "Gluten-Free"]);
+cappuccino.generateRecipe("1", "shot", "espresso")
+cappuccino.generateRecipe("1/2", "cup", "whole milk")
+cappuccino.generateRecipe("1/4", "cup", "whipping cream")
+cappuccino.generateRecipe("1", "tbsp", "granulated sugar (adjust to taste)")
+cappuccino.generateRecipe("1/2", "tsp", "vanilla extract (optional)")
+cappuccino.generateRecipe("1", "pinch", "cocoa powder for dusting (optional)")
+cappuccino.addInstructions("Brew a shot of espresso using your preferred method.")
+cappuccino.addInstructions("In a small saucepan, heat the whole milk until it is hot but not boiling. Froth the milk using a milk frother or by whisking vigorously.")
+cappuccino.addInstructions("In a separate bowl, whip the whipping cream until it forms stiff peaks.")
+cappuccino.addInstructions("Pour the hot espresso into a cappuccino cup.")
+cappuccino.addInstructions("Add the frothed milk to the espresso, holding back the foam with a spoon. Spoon the foam on top of the milk.")
+cappuccino.addInstructions("Sweeten the cappuccino with granulated sugar to taste and add vanilla extract if desired.")
+cappuccino.addInstructions("Top the cappuccino with a dollop of whipped cream.")
+cappuccino.addInstructions("Optional: Dust the cappuccino with cocoa powder for an extra touch of flavor.")
 
 const latte = new Meal("Latte", "Drinks", "./images/latte.jpeg", ["Vegetarian", "Healthy", "Gluten-Free"]);
+latte.generateRecipe("1", "shot", "espresso")
+latte.generateRecipe("1", "cup", "steamed milk (whole milk or any non-dairy milk of choice)")
+latte.generateRecipe("1", "tbsp", "foamed milk")
+latte.generateRecipe("1", "tsp", "sugar (adjust to taste)")
+latte.generateRecipe("1/2", "tsp", "vanilla extract (optional)")
+latte.generateRecipe("1", "pinch", "cinnamon or cocoa powder for garnish (optional)")
+latte.addInstructions("Brew a shot of espresso using your preferred method.")
+latte.addInstructions("In a separate container, steam the milk until it is hot but not boiling.")
+latte.addInstructions("Foam the milk using a milk frother or by whisking vigorously.")
+latte.addInstructions("Pour the shot of espresso into a latte mug.")
+latte.addInstructions("Add the steamed milk to the espresso.")
+latte.addInstructions("Spoon the foamed milk on top of the latte.")
+latte.addInstructions("Sweeten the latte with sugar to taste and add vanilla extract if desired.")
+latte.addInstructions("Optional: Garnish with a pinch of cinnamon or cocoa powder.")
+latte.addInstructions("Serve immediately and enjoy your homemade latte!")
 
 const hotChocolate = new Meal("Hot Chocolate", "Drinks", "./images/hot-chocolate.jpeg", ["Vegetarian", "Gluten-Free"]);
+hotChocolate.generateRecipe("2", "cups", "milk (whole milk or any non-dairy milk of choice)")
+hotChocolate.generateRecipe("2", "tbsp", "unsweetened cocoa powder")
+hotChocolate.generateRecipe("1-3", "tsp", "granulated sugar (adjust to taste)")
+hotChocolate.generateRecipe("1/4", "cup", "chocolate chips or chopped chocolate")
+hotChocolate.generateRecipe("1/2", "tsp", "vanilla extract")
+hotChocolate.generateRecipe("1/8", "tsp", "salt (optional)")
+hotChocolate.generateRecipe("Whipped cream, for topping (optional)")
+hotChocolate.generateRecipe("Chocolate shavings or cocoa powder, for garnish (optional)")
+hotChocolate.addInstructions("In a saucepan, heat the milk over medium heat until it is hot but not boiling.")
+hotChocolate.addInstructions("In a separate bowl, whisk together cocoa powder, granulated sugar, and a pinch of salt if desired.")
+hotChocolate.addInstructions("Gradually whisk the dry ingredients into the hot milk, ensuring there are no lumps.")
+hotChocolate.addInstructions("Add chocolate chips or chopped chocolate to the mixture, stirring until melted and well combined.")
+hotChocolate.addInstructions("Remove the saucepan from heat and stir in vanilla extract.")
+hotChocolate.addInstructions("Pour the hot chocolate into mugs and top with whipped cream if desired.")
+hotChocolate.addInstructions("Optional: Garnish with chocolate shavings or a sprinkle of cocoa powder.")
+hotChocolate.addInstructions("Serve immediately and enjoy your comforting cup of hot chocolate!")
 
 const icedCoffee = new Meal("Iced Coffee", "Drinks", "./images/iced-coffee.jpeg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+icedCoffee.generateRecipe("1", "cup", "strong brewed coffee, chilled")
+icedCoffee.generateRecipe("1-2", "tbsp", "simple syrup (adjust to taste)")
+icedCoffee.generateRecipe("1/4", "cup", "milk or cream (optional)")
+icedCoffee.generateRecipe("1", "cup", "ice cubes")
+icedCoffee.generateRecipe("1", "tbsp", "whipped cream (optional)")
+icedCoffee.generateRecipe("1", "tbsp", "chocolate syrup or caramel sauce (optional)")
+icedCoffee.addInstructions("Brew a cup of strong coffee and let it cool to room temperature or chill it in the refrigerator.")
+icedCoffee.addInstructions("In a glass, combine the chilled coffee with simple syrup, adjusting the sweetness to your liking.")
+icedCoffee.addInstructions("Optional: Add milk or cream for a creamier texture.")
+icedCoffee.addInstructions("Fill the glass with ice cubes.")
+icedCoffee.addInstructions("Optional: Top with whipped cream and drizzle with chocolate syrup or caramel sauce for added indulgence.")
+icedCoffee.addInstructions("Stir the iced coffee well to combine all ingredients.")
+icedCoffee.addInstructions("Serve immediately and enjoy your refreshing iced coffee!")
 
 const lemonade = new Meal("Lemonade", "Drinks", "./images/lemonade.jpeg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+lemonade.generateRecipe("1", "cup", "freshly squeezed lemon juice (about 4-6 lemons)")
+lemonade.generateRecipe("1", "cup", "granulated sugar (adjust to taste)")
+lemonade.generateRecipe("4", "cups", "cold water")
+lemonade.generateRecipe("1", "cup", "ice cubes")
+lemonade.generateRecipe("Lemon slices for garnish (optional)")
+lemonade.generateRecipe("Fresh mint leaves for garnish (optional)")
+lemonade.addInstructions("In a pitcher, combine freshly squeezed lemon juice and granulated sugar.")
+lemonade.addInstructions("Stir well until the sugar is dissolved.")
+lemonade.addInstructions("Add cold water to the pitcher and mix thoroughly.")
+lemonade.addInstructions("Taste the lemonade and adjust the sweetness by adding more sugar if needed.")
+lemonade.addInstructions("Chill the lemonade in the refrigerator for at least 1-2 hours.")
+lemonade.addInstructions("Fill glasses with ice cubes.")
+lemonade.addInstructions("Pour the chilled lemonade over the ice.")
+lemonade.addInstructions("Optional: Garnish with lemon slices and fresh mint leaves.")
+lemonade.addInstructions("Stir before serving to mix any settled sugar.")
 
+const chai = new Meal("Chai", "Drinks", "./images/chai.jpeg", ["Vegetarian", "Gluten-Free"])
+chai.generateRecipe("2", "cups", "water")
+chai.generateRecipe("2", "cups", "milk (whole milk or any non-dairy milk of choice)")
+chai.generateRecipe("2", "tbsp", "black tea leaves")
+chai.generateRecipe("4-6", "whole", "green cardamom pods")
+chai.generateRecipe("4-6", "whole", "cloves")
+chai.generateRecipe("2", "inch", "cinnamon stick")
+chai.generateRecipe("1/2", "inch", "fresh ginger, sliced")
+chai.generateRecipe("4-6", "", "black peppercorns")
+chai.generateRecipe("2-3", "tablespoons", "granulated sugar (adjust to taste)")
+
+chai.addInstructions("In a saucepan, combine water, loose tea leaves, cardamom pods, cloves, cinnamon stick, ginger, and black peppercorns.");
+chai.addInstructions("Bring the mixture to a simmer over medium heat, then add milk until boiling again.");
+chai.addInstructions("Reduce heat and let it simmer for 5-7 minutes to infuse the flavors.");
+chai.addInstructions("Add granulated sugar to the chai, adjusting the sweetness to your liking.");
+chai.addInstructions("Strain the chai into cups or mugs, discarding the tea bags and spices.");
+chai.addInstructions("Serve the chai hot and enjoy!");
 
 /// Data
 
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
 const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
 
-const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, ramen, pumpkinSoup, salmon, grilledChickenSandwich, sushi, shakshuka, spinachChicken, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
+//const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, ramen, pumpkinSoup, salmon, grilledChickenSandwich, sushi, shakshuka, spinachChicken, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
+const allMeals = [tacos, pancakes, sushi, salad, grilledChickenSandwich, ramen, tea, brownies, omelette, pasta, lentilSoup, biriyani, loxBagel, crepes, butterChicken, avocadoToast, cappucino, pizza, hotChocolate, salmon, icedCoffee, shakshuka, eggsToast, pumpkinSoup, affogato, charcuterieBoard, breadCheese, breakfastQuiche, avocadoSandwich, spinachChicken, applesPB, burger, coffee, lemonade, peanutButterToast, iceCream];
 
 export {Meal, allMeals, mealTypes, mealOptions};
