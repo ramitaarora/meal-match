@@ -546,7 +546,6 @@ chai.generateRecipe("2", "inch", "cinnamon stick")
 chai.generateRecipe("1/2", "inch", "fresh ginger, sliced")
 chai.generateRecipe("4-6", "", "black peppercorns")
 chai.generateRecipe("2-3", "tablespoons", "granulated sugar (adjust to taste)")
-
 chai.addInstructions("In a saucepan, combine water, loose tea leaves, cardamom pods, cloves, cinnamon stick, ginger, and black peppercorns.");
 chai.addInstructions("Bring the mixture to a simmer over medium heat, then add milk until boiling again.");
 chai.addInstructions("Reduce heat and let it simmer for 5-7 minutes to infuse the flavors.");
@@ -559,7 +558,7 @@ chai.addInstructions("Serve the chai hot and enjoy!");
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
 const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
 
-//const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, ramen, pumpkinSoup, salmon, grilledChickenSandwich, sushi, shakshuka, spinachChicken, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast];
-const allMeals = [tacos, pancakes, sushi, salad, grilledChickenSandwich, ramen, tea, brownies, omelette, pasta, lentilSoup, biriyani, loxBagel, crepes, butterChicken, avocadoToast, cappucino, pizza, hotChocolate, salmon, icedCoffee, shakshuka, eggsToast, pumpkinSoup, affogato, charcuterieBoard, breadCheese, breakfastQuiche, avocadoSandwich, spinachChicken, applesPB, burger, coffee, lemonade, peanutButterToast, iceCream];
+//const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, ramen, pumpkinSoup, salmon, grilledChickenSandwich, sushi, shakshuka, spinachChicken, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast, chai];
+const allMeals = [tacos, pancakes, sushi, salad, grilledChickenSandwich, ramen, tea, brownies, omelette, pasta, lentilSoup, biriyani, loxBagel, crepes, butterChicken, avocadoToast, cappucino, pizza, hotChocolate, salmon, icedCoffee, shakshuka, eggsToast, pumpkinSoup, affogato, charcuterieBoard, breadCheese, breakfastQuiche, avocadoSandwich, spinachChicken, applesPB, burger, coffee, lemonade, peanutButterToast, iceCream, chai];
 
 export {Meal, allMeals, mealTypes, mealOptions};
