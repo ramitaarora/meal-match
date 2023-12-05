@@ -1,5 +1,6 @@
 {
   "name": "meal-match",
+  "homepage": "http://ramitaarora.github.io/meal-match",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
