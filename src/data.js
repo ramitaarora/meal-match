@@ -375,25 +375,25 @@ breadCheese.generateRecipe(1, "slice", "cheese");
 breadCheese.addInstructions("Toast bread and enjoy with cheese, deli meat and any other toppings desired.")
 
 const charcuterieBoard = new Meal("Charcuterie Board", "Snacks", "./images/charcuterie-board.jpeg", ["Healthy"]);
-charcuterie_board.generateRecipe("", "Assorted", "cheeses (e.g., brie, cheddar, gouda, blue cheese)")
-charcuterie_board.generateRecipe("", "Assorted", "cured meats (e.g., prosciutto, salami, chorizo)")
-charcuterie_board.generateRecipe("1", "cup", "mixed nuts")
-charcuterie_board.generateRecipe("1", "cup", "dried fruits (e.g., apricots, figs, dates)")
-charcuterie_board.generateRecipe("1", "cup", "olives (assorted varieties)")
-charcuterie_board.generateRecipe("1/2", "cup", "whole grain mustard")
-charcuterie_board.generateRecipe("1/2", "cup", "fruit preserves (e.g., fig or apricot)")
-charcuterie_board.generateRecipe("1", "", "baguette, sliced")
-charcuterie_board.generateRecipe("", "Fresh", "fruit (e.g., grapes, apple slices)")
-charcuterie_board.generateRecipe("", "", "Honey, for drizzling")
-charcuterie_board.generateRecipe("1", "sprig", "rosemary (for garnish, optional)")
-charcuterie_board.addInstructions("Start by selecting a large wooden board or platter as the base for your charcuterie board.")
-charcuterie_board.addInstructions("Arrange the assorted cheeses and cured meats on the board, creating visually appealing groupings.")
-charcuterie_board.addInstructions("Fill small bowls with mixed nuts, dried fruits, and olives, distributing them evenly around the board.")
-charcuterie_board.addInstructions("Place whole grain mustard and fruit preserves in small serving dishes for dipping.")
-charcuterie_board.addInstructions("Add slices of baguette to the board, placing them near the cheeses and meats.")
-charcuterie_board.addInstructions("Fill any remaining spaces on the board with fresh fruit, such as grapes or apple slices.")
-charcuterie_board.addInstructions("Drizzle honey over certain cheeses for added sweetness.")
-charcuterie_board.addInstructions("Optional: Garnish with a sprig of rosemary for a decorative touch.")
+charcuterieBoard.generateRecipe("", "Assorted", "cheeses (e.g., brie, cheddar, gouda, blue cheese)")
+charcuterieBoard.generateRecipe("", "Assorted", "cured meats (e.g., prosciutto, salami, chorizo)")
+charcuterieBoard.generateRecipe("1", "cup", "mixed nuts")
+charcuterieBoard.generateRecipe("1", "cup", "dried fruits (e.g., apricots, figs, dates)")
+charcuterieBoard.generateRecipe("1", "cup", "olives (assorted varieties)")
+charcuterieBoard.generateRecipe("1/2", "cup", "whole grain mustard")
+charcuterieBoard.generateRecipe("1/2", "cup", "fruit preserves (e.g., fig or apricot)")
+charcuterieBoard.generateRecipe("1", "", "baguette, sliced")
+charcuterieBoard.generateRecipe("", "Fresh", "fruit (e.g., grapes, apple slices)")
+charcuterieBoard.generateRecipe("", "", "Honey, for drizzling")
+charcuterieBoard.generateRecipe("1", "sprig", "rosemary (for garnish, optional)")
+charcuterieBoard.addInstructions("Start by selecting a large wooden board or platter as the base for your charcuterie board.")
+charcuterieBoard.addInstructions("Arrange the assorted cheeses and cured meats on the board, creating visually appealing groupings.")
+charcuterieBoard.addInstructions("Fill small bowls with mixed nuts, dried fruits, and olives, distributing them evenly around the board.")
+charcuterieBoard.addInstructions("Place whole grain mustard and fruit preserves in small serving dishes for dipping.")
+charcuterieBoard.addInstructions("Add slices of baguette to the board, placing them near the cheeses and meats.")
+charcuterieBoard.addInstructions("Fill any remaining spaces on the board with fresh fruit, such as grapes or apple slices.")
+charcuterieBoard.addInstructions("Drizzle honey over certain cheeses for added sweetness.")
+charcuterieBoard.addInstructions("Optional: Garnish with a sprig of rosemary for a decorative touch.")
 
 const peanutButterToast = new Meal("Peanut Butter Toast", "Snacks", "./images/pb-toast.jpeg", ["Vegetarian", "Vegan"]);
 peanutButterToast.generateRecipe("", "", "peanut butter");
@@ -453,7 +453,7 @@ coffee.generateRecipe(1, "tbsp", "coffee beans")
 coffee.addInstructions("Grind the coffee, pick the size of grind according to coffee machine.")
 coffee.addInstructions("Add coffee grounds to coffee machine. Enjoy coffee with milk, cream, sugar, cinnamon and more.")
 
-const cappucino = new Meal("Cappucino", "Drinks", "./images/cappucino.jpeg", ["Vegetarian", "Healthy", "Gluten-Free"]);
+const cappuccino = new Meal("Cappucino", "Drinks", "./images/cappucino.jpeg", ["Vegetarian", "Healthy", "Gluten-Free"]);
 cappuccino.generateRecipe("1", "shot", "espresso")
 cappuccino.generateRecipe("1/2", "cup", "whole milk")
 cappuccino.generateRecipe("1/4", "cup", "whipping cream")
@@ -558,7 +558,7 @@ chai.addInstructions("Serve the chai hot and enjoy!");
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
 const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
 
-//const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, ramen, pumpkinSoup, salmon, grilledChickenSandwich, sushi, shakshuka, spinachChicken, affogato, tea, coffee, cappucino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast, chai];
-const allMeals = [tacos, pancakes, sushi, salad, grilledChickenSandwich, ramen, tea, brownies, omelette, pasta, lentilSoup, biriyani, loxBagel, crepes, butterChicken, avocadoToast, cappucino, pizza, hotChocolate, salmon, icedCoffee, shakshuka, eggsToast, pumpkinSoup, affogato, charcuterieBoard, breadCheese, breakfastQuiche, avocadoSandwich, spinachChicken, applesPB, burger, coffee, lemonade, peanutButterToast, iceCream, chai];
+//const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, ramen, pumpkinSoup, salmon, grilledChickenSandwich, sushi, shakshuka, spinachChicken, affogato, tea, coffee, cappuccino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast, chai];
+const allMeals = [tacos, pancakes, sushi, salad, grilledChickenSandwich, ramen, tea, brownies, omelette, pasta, lentilSoup, biriyani, loxBagel, crepes, butterChicken, avocadoToast, cappuccino, pizza, hotChocolate, salmon, icedCoffee, shakshuka, eggsToast, pumpkinSoup, affogato, charcuterieBoard, breadCheese, breakfastQuiche, avocadoSandwich, spinachChicken, applesPB, burger, coffee, lemonade, peanutButterToast, iceCream, chai];
 
 export {Meal, allMeals, mealTypes, mealOptions};
