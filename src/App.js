@@ -196,6 +196,23 @@ function MealChoice({mealOptionsData, allOptionsData, mealChoice, back}) {
 };
 
 function Recipe({selectedMeal, back}) {
+  const [step, setStep] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    if (currentIndex < selectedMeal.instructions.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setStep(step + 1);
+    }
+  }
+
+  const handleBack = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setStep(step - 1);
+    }
+  }
+
   //console.log(selectedMeal);
   return (
     <div className="recipe">
@@ -215,13 +232,26 @@ function Recipe({selectedMeal, back}) {
 
         </div>
         <div className="instructions">
-            <ol> 
-              {selectedMeal.instructions.map(item => 
-                <li>{item}</li>
-                )
-              }
-            </ol>
+          <h2>Instructions</h2>
+          <div id="instructions-step">
+            <p>{step}. {selectedMeal.instructions[currentIndex]}</p>
           </div>
+        </div>
+        <div id="arrows">
+        <div id="back-step" onClick={handleBack}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="grey" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+          </svg>
+          <p>Back</p>
+        </div>
+
+        <div id="next-step" onClick={handleNext}>
+          <p>Next Step</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="grey" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+          </svg>
+        </div>
+        </div>
       </div>
       <div className="back">
           <button onClick={back}>Back to Main Menu</button>

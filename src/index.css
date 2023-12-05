@@ -55,7 +55,8 @@
 
 .back-arrow p {
   font-size: 12px;
-  margin: 5px;
+  margin: 0 5px;
+  align-self: flex-end;
 }
 
 .back-arrow svg {
@@ -168,11 +169,6 @@
 
 /* Meal Card */
 
-#main-menu-label {
-  font-size: 100%;
-  align-self: center;
-}
-
 .meal-picture {
   height: 320px;
   width: 300px;
@@ -253,6 +249,11 @@
 .ingredients {
   min-height: 120px;
   min-height: fit-content;
+  overflow: scroll;
+}
+
+.ingredients::-webkit-scrollbar {
+  overflow: hidden;
 }
 
 .recipe-map {
@@ -269,14 +270,36 @@
 }
 
 .instructions {
-  min-height: 150px;
-  border: 1px solid grey;
-  overflow:hidden;
+  min-height: 120px;
+  max-height: 120px;
+  margin-top: 5px;
 }
 
-.instructions li {
-  list-style:decimal;
-  margin-bottom: 5px;
+#instructions-step {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#instructions-step p {
+  font-size: 95%;
+}
+
+#arrows {
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+#back-step, #next-step {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#back-step p, #next-step p {
+  font-size: 80%;
 }
 
 .recipe .back {
