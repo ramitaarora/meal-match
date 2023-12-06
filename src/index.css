@@ -234,7 +234,7 @@
 .meal-picture-recipe {
   height: 120px;
   width: 120px;
-  /* margin: 0 10px 0 0; */
+  margin: 0 10px 0 0;
   float: right;
   overflow: hidden;
 }

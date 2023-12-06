@@ -1,24 +1,66 @@
-import {Meal, allMeals, mealTypes, mealOptions} from './data.js';
-import {selectedMeal, back} from '../App.js';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Recipe({selectedMeal, back}) {
-  console.log(selectedMeal);
+  const [step, setStep] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    if (currentIndex < selectedMeal.instructions.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setStep(step + 1);
+    }
+  }
+
+  const handleBack = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setStep(step - 1);
+    }
+  }
+
+  //console.log(selectedMeal);
   return (
     <div className="recipe">
-      <h2>Recipe for {selectedMeal.mealName}</h2>
-      <div className="meal-picture-recipe">
-        <img src={selectedMeal.picture} alt={selectedMeal.mealName}/>
-      </div>
-      {selectedMeal.recipe.map(item => 
-        <div className="recipe-map">
-          <input type="checkbox"></input><p>{item}</p>
+      <div id="recipe-container">
+        <h2>Recipe for {selectedMeal.mealName}</h2>
+        
+        <div className="ingredients">
+          <div className="meal-picture-recipe">
+            <img src={selectedMeal.picture} alt={selectedMeal.mealName}/>
+          </div>
+          {selectedMeal.recipe.map((item, index) => 
+            <div key={index} className="recipe-map">
+              <input type="checkbox"></input><p>{item}</p>
+            </div>
+            )
+          }
+
         </div>
-        )
-      }
+        <div className="instructions">
+          <h2>Instructions</h2>
+          <div id="instructions-step">
+            <p>{step}. {selectedMeal.instructions[currentIndex]}</p>
+          </div>
+        </div>
+        <div id="arrows">
+        <div id="back-step" onClick={handleBack}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="grey" className="bi bi-arrow-left-short" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+          </svg>
+          <p>Previous Step</p>
+        </div>
+
+        <div id="next-step" onClick={handleNext}>
+          <p>Next Step</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="grey" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+          </svg>
+        </div>
+        </div>
+      </div>
       <div className="back">
-        <button onClick={back}>Back to Main Menu</button>
+          <button onClick={back}>Back to Main Menu</button>
       </div>
     </div>
   )
-};
+}

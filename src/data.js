@@ -47,10 +47,6 @@ class Meal {
   }
 }
 
-// function addNewMeal(mealName, mealType, picture, options) {
-    
-// }
-
 // Breakfast
 
 const pancakes = new Meal("Pancakes", "Breakfast", "./images/pancakes.jpeg", ["Vegetarian", "Vegan"]);
@@ -62,7 +58,6 @@ pancakes.addInstructions("Mash the banana.")
 pancakes.addInstructions("Mix all ingredients together in a bowl until liquidy and smooth.")
 pancakes.addInstructions("Use a ladle and pour pancake batter onto a med-hot griddle.")
 pancakes.addInstructions("Flip over every 30 seconds or so until golden brown.")
-
 
 const eggsToast = new Meal("Eggs and Toast", "Breakfast", "./images/eggs-toast.jpeg", ["Healthy", "Vegetarian"]);
 eggsToast.generateRecipe(2, "", "eggs");
@@ -82,7 +77,6 @@ breakfastQuiche.generateRecipe("", "", "pepper");
 breakfastQuiche.addInstructions("In a bowl, beat the eggs with the spices.");
 breakfastQuiche.addInstructions("Add all the ingredits into a pie dish or pan.");
 breakfastQuiche.addInstructions("Bake at 375F for 30 minutes.");
-
 
 const crepes = new Meal("Crepes", "Breakfast", "./images/crepes.jpeg", ["Vegetarian"]);
 crepes.generateRecipe("1", "cup", "flour");
@@ -255,7 +249,7 @@ butterChicken.addInstructions("Add chopped roma tomatoes, tomato paste/sauce and
 butterChicken.addInstructions("Add chopped chicken breast or thighs into the wok and top with yogurt. Add water until chicken is just submerged.")
 butterChicken.addInstructions("Boil, then simmer until chicken is thoroughly cooked.")
 
-const tacos = new Meal("Tacos", "Dinner", "./images/tacos.jpeg", ["Vegetarian"])
+const tacos = new Meal("Tacos", "Dinner", "/images/tacos.jpeg", ["Vegetarian"])
 tacos.generateRecipe("", "", "taco shells");
 tacos.generateRecipe("", "", "meat of choice (optional)");
 tacos.generateRecipe("", "", "chopped lettuce");
