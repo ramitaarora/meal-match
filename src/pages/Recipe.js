@@ -5,6 +5,7 @@ export default function Recipe({selectedMeal, back}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevColor, setPrevColor] = useState({color: 'grey', cursor: 'default'})
   const [nextColor, setNextColor] = useState({color: 'black', cursor: 'pointer'})
+  const [slide, setSlide] = useState('');
 
   useEffect(() => {
     if (currentIndex === 0) {
@@ -19,8 +20,24 @@ export default function Recipe({selectedMeal, back}) {
     }
   }, [currentIndex])
 
+  useEffect(() => {
+    if (slide === 'slideOutRight') {
+      setTimeout(() => {
+        setSlide('slideInLeft')
+      }, 500);
+    }
+
+    if (slide === 'slideOutLeft') {
+      setTimeout(() => {
+        setSlide('slideInRight')
+      }, 500);
+    }
+    
+  }, [slide])
+
   const handleNext = () => {
     if (currentIndex < selectedMeal.instructions.length - 1) {
+      setSlide('slideOutRight')
       setCurrentIndex(currentIndex + 1);
       setStep(step + 1);
     }
@@ -30,10 +47,10 @@ export default function Recipe({selectedMeal, back}) {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
       setStep(step - 1);
+      setSlide('slideOutLeft')
     }
   }
 
-  //console.log(selectedMeal);
   return (
     <div className="recipe">
       <div id="recipe-container">
@@ -54,7 +71,7 @@ export default function Recipe({selectedMeal, back}) {
         <div className="instructions">
           <h2>Instructions</h2>
           <div id="instructions-step">
-            <p>{step}. {selectedMeal.instructions[currentIndex]}</p>
+            <p id={slide}>{step}. {selectedMeal.instructions[currentIndex]}</p>
           </div>
         </div>
         <div id="arrows">
