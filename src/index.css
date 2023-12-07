@@ -85,6 +85,14 @@
   }
 }
 
+#slideInLeft {
+  animation: slideInLeft 1s;
+}
+
+#slideInRight {
+  animation: slideInRight 1s;
+}
+
 @keyframes slideOutRight {
   0% {
     transform: translateX(0px);
@@ -103,20 +111,78 @@
   }
 }
 
-#slideInLeft {
-  animation: slideInLeft 1s;
-}
-
-#slideInRight {
-  animation: slideInRight 1s;
-}
-
 #slideOutRight {
   animation: slideOutRight 1s;
 }
 
 #slideOutLeft {
   animation: slideOutLeft 1s;
+}
+
+@keyframes backOutRight {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+
+  20% {
+      transform: translate(0px, 0px) scale(0.7);
+      opacity: 0.7;
+  }
+
+  100% {
+      transform: translate(2000px, 0px) scale(0.7);
+      opacity: 0.7;
+  }
+}
+
+@keyframes backOutLeft {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+
+  20% {
+      transform: translate(0px, 0px) scale(0.7);
+      opacity: 0.7;
+  }
+
+  100% {
+      transform: translate(-2000px, 0px) scale(0.7);
+      opacity: 0.7;
+  }
+}
+
+@keyframes backIn {
+  0% {
+    transform: translate(2000px, 0px) scale(0.7);
+      opacity: 0.7;
+  }
+
+  20% {
+      transform: translate(0px, 0px) scale(0.7);
+      opacity: 0.7;
+  }
+
+  100% {
+      transform: translate(0px, 0px) scale(1);
+      opacity: 1;
+  }
+}
+
+#backOutRight {
+  transform-origin: 50% 50%;
+  animation: backOutRight 1s ease 0s 1 normal both running;
+}
+
+#backOutLeft {
+  transform-origin: 50% 50%;
+  animation: backOutLeft 1s ease 0s 1 normal both running;
+}
+
+#backIn {
+  transform-origin: 50% 50%;
+  animation: backIn 1s ease 0s 1 normal both running;
 }
 
 /* Main Menu */

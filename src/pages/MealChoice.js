@@ -4,6 +4,7 @@ import { allMeals } from '../data';
 export default function MealChoice({mealOptionsData, allOptionsData, mealChoice, back}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mealArray, setMealArray] = useState(allMeals);
+  const [animation, setAnimation] = useState('');
 
   useEffect (() => {
     let newMealArray = [];
@@ -24,16 +25,39 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
     }
   }, [])
 
+  useEffect(() => {
+    if (animation === 'backOutLeft') {
+      setTimeout(() => {
+        setAnimation('backIn')
+      }, 500)
+
+      // setTimeout(() => {
+      //   setAnimation('')
+      // }, 2000)
+    }
+  }, [animation])
+
   const nextMeal = () => {
     if (currentIndex < (mealArray.length -1)) {
-      setCurrentIndex(currentIndex + 1);
+      setAnimation('backOutLeft')
+      setTimeout(() => {
+        setCurrentIndex(currentIndex + 1);
+      }, 300)
+      
     } else {
-      setCurrentIndex(0);
+      setAnimation('backOutLeft')
+      setTimeout(() => {
+        setCurrentIndex(0);
+      }, 300)
+      
     }
     }
 
   const selectMeal = () => {
-    mealChoice(mealArray[currentIndex]);
+    setAnimation('backOutRight')
+    setTimeout(() => {
+      mealChoice(mealArray[currentIndex]);
+    }, 300)
   }
 
   return (
@@ -44,10 +68,10 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
         </svg>
         <p>Back to Main Menu</p>
       </div>
-      <div className="meal-picture">
+      <div className="meal-picture" id={animation}>
         <img src={mealArray[currentIndex].picture} alt={mealArray[currentIndex].mealName}></img>
       </div>
-      <div className="meal-description">
+      <div className="meal-description" id={animation}>
         <h2>{mealArray[currentIndex].mealName}</h2>
       </div>
       <div className="flipping-buttons">
