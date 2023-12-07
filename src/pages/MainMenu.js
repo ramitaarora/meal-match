@@ -4,12 +4,27 @@ import { mealTypes, mealOptions } from '../data';
 export default function MainMenu({setMeals, search}) {
   const [mealTypeSelection, setMealTypeSelection] = useState();
   const [otherOptionSelection, setOtherOptionSelection] = useState([]);
+  const [slide, setSlide] = useState('slideInLeft')
+
+  const handleSubmit = () => {
+    setSlide('slideOutRight')
+    setTimeout(() => {
+      setMeals(mealTypeSelection, otherOptionSelection)
+    }, 500)
+  }
+
+  const handleSearch = () => {
+    setSlide('slideOutRight');
+    setTimeout(() => {
+      search()
+    }, 300)
+  }
 
   return (
-      <div className="main-menu" id="slideInRight">
+      <div className="main-menu" id={slide}>
       
         <div className="search-button-container">
-          <button className="search-button" onClick={search}>
+          <button className="search-button" onClick={handleSearch}>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey" className="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
           </svg>
@@ -37,7 +52,7 @@ export default function MainMenu({setMeals, search}) {
             </div>
 
             <div className="submit-options">
-              <button onClick={() => setMeals(mealTypeSelection, otherOptionSelection)}>Submit</button>
+              <button onClick={handleSubmit}>Submit</button>
             </div>
 
           </div>

@@ -5,6 +5,7 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mealArray, setMealArray] = useState(allMeals);
   const [animation, setAnimation] = useState('');
+  const [slide, setSlide] = useState('slideInLeft');
 
   useEffect (() => {
     let newMealArray = [];
@@ -56,13 +57,21 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
   const selectMeal = () => {
     setAnimation('backOutRight')
     setTimeout(() => {
+      setSlide('slideOutRight')
       mealChoice(mealArray[currentIndex]);
     }, 300)
   }
 
+  const handleHome = () => {
+    setSlide('slideOutLeft');
+    setTimeout(() => {
+      back()
+    }, 300)
+  }
+
   return (
-    <div className="meal-choice" id="slideInLeft">
-      <div className="back-arrow" onClick={back}>
+    <div className="meal-choice" id={slide}>
+      <div className="back-arrow" onClick={handleHome}>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" className="bi bi-house-door-fill" viewBox="0 0 16 16">
           <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
         </svg>

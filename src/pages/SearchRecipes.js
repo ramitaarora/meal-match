@@ -4,6 +4,7 @@ import { allMeals } from '../data';
 export default function SearchRecipes ({back, selectedMeal}) {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [slide, setSlide] = useState('slideInLeft');
 
   useEffect (() => {
     let searchMeals = allMeals.filter((meal) => ( 
@@ -20,8 +21,15 @@ export default function SearchRecipes ({back, selectedMeal}) {
     selectedMeal(allMeals[mealIndex]);
   }
 
+  const handleHome = () => {
+    setSlide('slideOutLeft');
+    setTimeout(() => {
+      back()
+    }, 300);
+  }
+
   return (
-    <div className="search-recipes" id="slideInLeft">
+    <div className="search-recipes" id={slide}>
       <div id="search-container">
         <div className="search-bar">
           <input type="search" placeholder="Search Recipe, Type, Ingredient" value={searchTerm} onChange={event => setSearchTerm(event.target.value)}></input>
@@ -33,7 +41,7 @@ export default function SearchRecipes ({back, selectedMeal}) {
       </div>
       
       <div className="back">
-        <button onClick={back}>Back to Main Menu</button>
+        <button onClick={handleHome}>Back to Main Menu</button>
       </div>
     
     </div>

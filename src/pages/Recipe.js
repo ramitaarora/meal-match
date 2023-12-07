@@ -6,6 +6,7 @@ export default function Recipe({selectedMeal, back}) {
   const [prevColor, setPrevColor] = useState({color: 'grey', cursor: 'default'})
   const [nextColor, setNextColor] = useState({color: 'black', cursor: 'pointer'})
   const [slide, setSlide] = useState('');
+  const [recipeSlide, setRecipeSlide] = useState('slideInLeft')
 
   useEffect(() => {
     if (currentIndex === 0) {
@@ -52,8 +53,15 @@ export default function Recipe({selectedMeal, back}) {
     }
   }
 
+  const handleHome = () => {
+    setRecipeSlide('slideOutLeft');
+    setTimeout(() => {
+      back()
+    }, 300);
+  }
+
   return (
-    <div className="recipe" id="slideInLeft">
+    <div className="recipe" id={recipeSlide}>
       <div id="recipe-container">
         <h2>Recipe for {selectedMeal.mealName}</h2>
         
@@ -92,7 +100,7 @@ export default function Recipe({selectedMeal, back}) {
         </div>
       </div>
       <div className="back">
-          <button onClick={back}>Back to Main Menu</button>
+          <button onClick={handleHome}>Back to Main Menu</button>
       </div>
     </div>
   )
