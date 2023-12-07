@@ -21,7 +21,7 @@ export default function SearchRecipes ({back, selectedMeal}) {
   }
 
   return (
-    <div className="search-recipes">
+    <div className="search-recipes" id="slideInLeft">
       <div id="search-container">
         <div className="search-bar">
           <input type="search" placeholder="Search Recipe, Type, Ingredient" value={searchTerm} onChange={event => setSearchTerm(event.target.value)}></input>

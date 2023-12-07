@@ -17,6 +17,7 @@ export default function Recipe({selectedMeal, back}) {
     }
     if (currentIndex === selectedMeal.instructions.length - 1) {
       setNextColor({color: 'grey', cursor: 'default'})
+      setPrevColor({color: 'black', cursor: 'pointer'})
     }
   }, [currentIndex])
 
@@ -52,7 +53,7 @@ export default function Recipe({selectedMeal, back}) {
   }
 
   return (
-    <div className="recipe">
+    <div className="recipe" id="slideInLeft">
       <div id="recipe-container">
         <h2>Recipe for {selectedMeal.mealName}</h2>
         

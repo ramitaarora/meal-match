@@ -6,7 +6,7 @@ export default function MainMenu({setMeals, search}) {
   const [otherOptionSelection, setOtherOptionSelection] = useState([]);
 
   return (
-      <div className="main-menu">
+      <div className="main-menu" id="slideInRight">
       
         <div className="search-button-container">
           <button className="search-button" onClick={search}>
