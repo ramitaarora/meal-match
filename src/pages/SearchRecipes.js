@@ -18,7 +18,11 @@ export default function SearchRecipes ({back, selectedMeal}) {
 
   const selectMeal = (event) => {
     let mealIndex = allMeals.findIndex(meal => meal.mealName === event.target.innerHTML)
-    selectedMeal(allMeals[mealIndex]);
+    setSlide('slideOutRight')
+    setTimeout(() => {
+      selectedMeal(allMeals[mealIndex]);
+    }, 300)
+    
   }
 
   const handleHome = () => {
