@@ -23,15 +23,15 @@ export default function Recipe({selectedMeal, back}) {
   }, [currentIndex])
 
   useEffect(() => {
-    if (slide === 'slideOutRight') {
-      setTimeout(() => {
-        setSlide('slideInLeft')
-      }, 500);
-    }
-
     if (slide === 'slideOutLeft') {
       setTimeout(() => {
         setSlide('slideInRight')
+      }, 500);
+    }
+
+    if (slide === 'slideOutRight') {
+      setTimeout(() => {
+        setSlide('slideInLeft')
       }, 500);
     }
     
@@ -39,7 +39,7 @@ export default function Recipe({selectedMeal, back}) {
 
   const handleNext = () => {
     if (currentIndex < selectedMeal.instructions.length - 1) {
-      setSlide('slideOutRight')
+      setSlide('slideOutLeft')
       setCurrentIndex(currentIndex + 1);
       setStep(step + 1);
     }
@@ -49,7 +49,7 @@ export default function Recipe({selectedMeal, back}) {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
       setStep(step - 1);
-      setSlide('slideOutLeft')
+      setSlide('slideOutRight')
     }
   }
 
