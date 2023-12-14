@@ -3,20 +3,25 @@ import { useState, useEffect } from 'react';
 export default function Recipe({selectedMeal, back}) {
   const [step, setStep] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [prevColor, setPrevColor] = useState({color: 'grey', cursor: 'default'})
-  const [nextColor, setNextColor] = useState({color: 'black', cursor: 'pointer'})
+  const [prevColor, setPrevColor] = useState({color: '', cursor: ''})
+  const [nextColor, setNextColor] = useState({color: '', cursor: ''})
   const [slide, setSlide] = useState('');
   const [recipeSlide, setRecipeSlide] = useState('slideInLeft')
 
   useEffect(() => {
-    if (currentIndex === 0) {
-      setPrevColor({color: 'grey'})
+    if (currentIndex === 0 && selectedMeal.instructions.length === 1) {
+      setPrevColor({color: 'grey', cursor: 'default'})
+      setNextColor({color: 'grey', cursor: 'default'})
+    }
+    if (currentIndex === 0 && selectedMeal.instructions.length > 1) {
+      setPrevColor({color: 'grey', cursor: 'default'})
       setNextColor({color: 'black', cursor: 'pointer'})
     }
     if (currentIndex > 0 && currentIndex < selectedMeal.instructions.length - 1) {
       setPrevColor({color: 'black', cursor: 'pointer'})
+      setNextColor({color: 'black', cursor: 'pointer'})
     }
-    if (currentIndex === selectedMeal.instructions.length - 1) {
+    if (currentIndex > 0 && currentIndex === selectedMeal.instructions.length - 1) {
       setNextColor({color: 'grey', cursor: 'default'})
       setPrevColor({color: 'black', cursor: 'pointer'})
     }
