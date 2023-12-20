@@ -45,16 +45,21 @@ export default function Recipe({selectedMeal, back}) {
   const handleNext = () => {
     if (currentIndex < selectedMeal.instructions.length - 1) {
       setSlide('slideOutLeft')
-      setCurrentIndex(currentIndex + 1);
-      setStep(step + 1);
+      setTimeout(() => {
+        setCurrentIndex(currentIndex + 1);
+        setStep(step + 1);
+      }, 400)
+      
     }
   }
 
   const handleBack = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      setStep(step - 1);
       setSlide('slideOutRight')
+      setTimeout(() => {
+        setCurrentIndex(currentIndex - 1);
+        setStep(step - 1);
+      }, 400)
     }
   }
 

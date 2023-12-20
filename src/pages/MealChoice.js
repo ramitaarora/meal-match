@@ -6,7 +6,7 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
   const [mealArray, setMealArray] = useState(allMeals);
   const [animation, setAnimation] = useState('');
   const [slide, setSlide] = useState('slideInLeft');
-  const [length, setLength] = useState();
+  const [length, setLength] = useState(false);
 
   useEffect (() => {
     let newMealArray = [];
@@ -22,13 +22,13 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
     if (newMealArray.length !== 0) {
       setMealArray(newMealArray);
       setLength(true);
-    } else if (newMealArray.length === 0 && (mealOptionsData || allOptionsData)) {
-      setLength(false);
-    } else {
-        // console.error("No meals found!");
-        setMealArray(allMeals);
-        setLength(true);
     }
+
+    else if (newMealArray.length === 0 && !mealOptionsData && allOptionsData[0].length === 0) {
+      setMealArray(allMeals);
+      setLength(true);
+    } 
+
   }, [])
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
       setAnimation('backOutLeft')
       setTimeout(() => {
         setCurrentIndex(currentIndex + 1);
-      }, 300)
+      }, 200)
       
     } else {
       setAnimation('backOutLeft')

@@ -333,15 +333,25 @@ option, button {
   font-size: 12px;
 }
 
-.next svg {
+.next svg, .heart svg {
   height: 50px;
   width: 50px;
 }
 
-.heart svg {
-  height: 50px;
-  width: 50px;
+.next svg:hover, .heart svg:hover {
+  cursor: pointer;
+  position: relative;
+  top: -10px;
 }
+
+.next svg:hover {
+  left: -10px;
+}
+
+.heart svg:hover {
+  right: -10px;
+}
+
 
 /* Recipe Card */
 
