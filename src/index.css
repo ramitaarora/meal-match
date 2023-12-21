@@ -4,6 +4,10 @@
   --yellow: #f1f09c;
 }
 
+body {
+  margin: 0;
+}
+
 * {
   font-family: Raleway, 'Times New Roman', Times, serif;
   font-size: 16px;
@@ -24,12 +28,12 @@ option, button {
 }
 
 .app-card {
-  height: 650px;
+  height: 700px;
   width: 375px;
   margin: 0 auto;
   border: 1px solid grey;
-  box-shadow: 5px 5px 5px grey;
-  border-radius: 15px;
+  /* box-shadow: 5px 5px 5px grey; */
+  /* border-radius: 15px; */
   overflow: hidden;
   background: linear-gradient(#FFFFFF, 60%, var(--yellow));
 }
@@ -50,6 +54,13 @@ option, button {
   padding: 10px;
   /* border: 1px solid blue; */
   height: 500px;
+}
+
+/* Header Styles */
+
+#header {
+  display: flex;
+  align-items: center;
 }
 
 /* Home Button Styles */
@@ -306,6 +317,7 @@ option, button {
   width: 300px;
   object-position: center;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 .meal-description {
@@ -352,7 +364,6 @@ option, button {
   right: -10px;
 }
 
-
 /* Recipe Card */
 
 #recipe-container {
@@ -379,6 +390,7 @@ option, button {
   width: 120px;
   object-fit: center;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 .ingredients {

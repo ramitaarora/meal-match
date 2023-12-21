@@ -4,6 +4,8 @@ import MainMenu from './pages/MainMenu.js';
 import MealChoice from './pages/MealChoice.js';
 import Recipe from './pages/Recipe.js';
 import SearchRecipes from './pages/SearchRecipes.js';
+import Header from './components/Header.js';
+import Nav from './components/Nav.js';
 
 export default function App() {
   // Main Manu States
@@ -72,8 +74,9 @@ export default function App() {
   return (
     <div className="app">
       <div className="app-card">
-        <h1>Meal Match</h1>
+        <Header />
         {setPages()}
+        <Nav />
       </div>
     </div>
     
