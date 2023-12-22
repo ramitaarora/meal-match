@@ -1,7 +1,7 @@
 /* Global Styles */
 
 :root {
-  --yellow: #f1f09c;
+  --yellow: #f5f382;
 }
 
 body {
@@ -31,11 +31,11 @@ option, button {
   height: 700px;
   width: 375px;
   margin: 0 auto;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   /* box-shadow: 5px 5px 5px grey; */
   /* border-radius: 15px; */
   overflow: hidden;
-  background: linear-gradient(#FFFFFF, 60%, var(--yellow));
+  background: linear-gradient(var(--yellow), 80%, #f88c00);
 }
 
 .app-card h1 {
@@ -56,11 +56,18 @@ option, button {
   height: 500px;
 }
 
-/* Header Styles */
+/* Header & Navigation Styles */
 
 #header {
   display: flex;
   align-items: center;
+}
+
+#navigation {
+  /* background-color: #f88c00; */
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* Home Button Styles */
