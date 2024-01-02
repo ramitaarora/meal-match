@@ -550,7 +550,25 @@ chai.addInstructions("Serve the chai hot and enjoy!");
 /// Data
 
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"];
-const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
+// const mealOptions = ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"];
+const mealOptions = [
+  {
+    name: "Vegetarian",
+    logo: 'https://raw.githubusercontent.com/ramitaarora/meal-match/5610ceaa6294af4d3d0c9c67760bb8b1914c8d0d/public/svgs/carrot.svg'
+  },
+  {
+    name: "Vegan",
+    logo: 'https://raw.githubusercontent.com/ramitaarora/meal-match/5610ceaa6294af4d3d0c9c67760bb8b1914c8d0d/public/svgs/leaf.svg'
+  },
+  {
+    name: "Healthy",
+    logo: 'https://raw.githubusercontent.com/ramitaarora/meal-match/5610ceaa6294af4d3d0c9c67760bb8b1914c8d0d/public/svgs/healthy.svg'
+  },
+  {
+    name: "Gluten-Free",
+    logo: 'https://raw.githubusercontent.com/ramitaarora/meal-match/5610ceaa6294af4d3d0c9c67760bb8b1914c8d0d/public/svgs/gluten-free.svg'
+  },
+]
 
 //const allMeals = [pancakes, eggsToast, salad, butterChicken, applesPB, brownies, tacos, burger, avocadoSandwich, breadCheese, biriyani, breakfastQuiche, charcuterieBoard, crepes, iceCream, lentilSoup, loxBagel, omelette, pasta, peanutButterToast, pizza, ramen, pumpkinSoup, salmon, grilledChickenSandwich, sushi, shakshuka, spinachChicken, affogato, tea, coffee, cappuccino, latte, hotChocolate, icedCoffee, lemonade, avocadoToast, chai];
 const allMeals = [tacos, pancakes, sushi, salad, grilledChickenSandwich, ramen, tea, brownies, omelette, pasta, lentilSoup, biriyani, loxBagel, crepes, butterChicken, avocadoToast, cappuccino, pizza, hotChocolate, salmon, icedCoffee, shakshuka, eggsToast, pumpkinSoup, affogato, charcuterieBoard, breadCheese, breakfastQuiche, avocadoSandwich, spinachChicken, applesPB, burger, coffee, lemonade, peanutButterToast, iceCream, chai];

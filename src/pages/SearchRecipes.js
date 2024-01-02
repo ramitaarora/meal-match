@@ -43,10 +43,6 @@ export default function SearchRecipes ({back, selectedMeal}) {
           {searchResults.map((meal, index) => <p key={index} className="search-result-link" onClick={selectMeal}>{meal.mealName}</p>)}
         </div>
       </div>
-      
-      <div className="back">
-        <button onClick={handleHome}>Back to Main Menu</button>
-      </div>
     
     </div>
   )

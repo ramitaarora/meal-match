@@ -2,6 +2,9 @@
 
 :root {
   --yellow: #f5f382;
+  --orange: #f88c00;
+  --lightorange: rgb(247, 169, 66);
+  --radius: 15px;
 }
 
 body {
@@ -50,8 +53,8 @@ option, button {
 .meal-choice,
 .recipe,
 .add-recipe {
-  margin: 0px 10px 0px 10px;
-  padding: 10px;
+  /* margin: 0px 10px 0px 10px; */
+  /* padding: 0px; */
   /* border: 1px solid blue; */
   height: 500px;
 }
@@ -61,6 +64,8 @@ option, button {
 #header {
   display: flex;
   align-items: center;
+  /* border: 1px solid black; */
+  /* margin: 10px auto; */
 }
 
 #navigation {
@@ -68,6 +73,10 @@ option, button {
   padding: 20px;
   display: flex;
   justify-content: space-evenly;
+}
+
+#navigation svg:hover {
+  cursor: pointer;
 }
 
 /* Home Button Styles */
@@ -213,60 +222,106 @@ option, button {
 .main-menu h2 {
   text-align: center;
   font-size: 110%;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .main-menu p, 
 .main-menu input, 
 .main-menu select,
 .main-menu label {
-  font-size: 120%;
+  font-size: 100%;
 }
 
-.choose-meal-type select {
+/* .choose-meal-type select {
   margin-left: 10px;
   padding: 0 15px;
   height: 40px;
   border: 1px solid lightgrey;
   border-radius: 10px;
-}
+} */
 
-.choose-options, .choose-other-options {
+.choose-meal-type {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
 }
 
-.options {
-  width: 100%;
+#meal-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#meal-types p {
+  background-color: var(--orange);
+  padding: 10px;
+  width: 80px;
+  color: white;
+  border-radius: var(--radius);
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#meal-types p:hover {
+  background-color: var(--lightorange);
+}
+
+#highlight {
+  background-color: var(--lightorange);
 }
 
 .choose-other-options p {
   margin: 15px 10px; 
-  text-align: left;
+  text-align: center;
   margin-top: 20px;
 }
 
-.options label {
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+.each-option {
+  width: 50%;
+}
+
+.options {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 50%;
+  font-size: 80%;
+}
+
+.options img {
+  margin-bottom: 5px;
+}
+
+/* .options label {
   text-align: center;
   padding: 10px;
-  border: 1px solid lightgrey;
-  background-color: white;
-  width: 80%;
-  border-radius: 10px;
-}
+  background-color: var(--orange);
+  color: white;
+} */
 
 .options input {
   display: none;
 }
 
-.options label:hover {
-  background-color: rgb(224, 223, 223);
+.options:hover {
+  background-color: var(--lightorange);
 }
 
 .options input:checked ~ .label-background {
-  background-color: lightgrey;
+  background-color: var(--lightorange);
 }
 
 .options, .choose-meal-type {
@@ -283,15 +338,16 @@ option, button {
 }
 
 .submit-options button {
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 10px;
-  border: 1px solid lightgrey;
-  background-color: white;
-  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: var(--orange);
+  color: white;
+  border-radius: var(--radius);
 }
 
 .submit-options button:hover {
-  background-color: lightgrey;
+  background-color: var(--lightorange);
 }
 
 .search-button-container {
@@ -324,7 +380,7 @@ option, button {
   width: 300px;
   object-position: center;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: var(--radius);
 }
 
 .meal-description {
@@ -397,7 +453,7 @@ option, button {
   width: 120px;
   object-fit: center;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: var(--radius);
 }
 
 .ingredients {
@@ -466,7 +522,7 @@ option, button {
   padding: 10px;
   border: 1px solid lightgrey;
   background-color: white;
-  border-radius: 10px;
+  border-radius: var(--radius);
 }
 
 .recipe .back button:hover {
@@ -493,7 +549,7 @@ option, button {
   margin: 0 auto;
   color: grey;
   width: 300px;
-  border-radius: 10px;
+  border-radius: var(--radius);
 }
 
 .search-results {
@@ -513,7 +569,7 @@ option, button {
   padding: 10px;
   border: 1px solid lightgrey;
   background-color: white;
-  border-radius: 10px;
+  border-radius: var(--radius);
 }
 
 .search-recipes .back button:hover {
@@ -550,7 +606,7 @@ option, button {
   padding: 10px;
   border: 1px solid lightgrey;
   background-color: white;
-  border-radius: 10px;
+  border-radius: var(--radius);
 }
 
 #error .back button:hover {

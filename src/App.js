@@ -76,7 +76,7 @@ export default function App() {
       <div className="app-card">
         <Header />
         {setPages()}
-        <Nav />
+        <Nav back={backButton} search={searchPage}/>
       </div>
     </div>
     
