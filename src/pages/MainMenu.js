@@ -49,9 +49,11 @@ export default function MainMenu({setMeals, search}) {
             {mealOptions.map((option, index) =>
               <div key={index} className="each-option">
                 <div className="options">
-                  <img src={option.logo} height="30px" alt={option.name}/>
                   <input type="checkbox" value={option.name} id={option.name} onClick={event => setOtherOptionSelection(pre => [...pre, event.target.value])}></input>
-                  <label htmlFor={option.name} className="label-background">{option.name}</label>
+                  <label htmlFor={option.name} className="label-background">
+                    <img src={option.logo} height="30px" alt={option.name}/>
+                    {option.name}
+                  </label>
                 </div>
               </div>
             )}

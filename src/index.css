@@ -289,34 +289,31 @@ option, button {
 }
 
 .options {
-  width: 60px;
-  height: 60px;
+  
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 15px;
-  background-color: var(--orange);
-  color: white;
-  border-radius: 50%;
-  font-size: 80%;
 }
 
 .options img {
   margin-bottom: 5px;
 }
 
-/* .options label {
-  text-align: center;
-  padding: 10px;
+.options label {
   background-color: var(--orange);
   color: white;
-} */
+  border-radius: 50%;
+  font-size: 80%;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+}
 
 .options input {
   display: none;
 }
 
-.options:hover {
+.options label:hover {
   background-color: var(--lightorange);
 }
 
