@@ -2,14 +2,23 @@ import { useState, useEffect } from 'react';
 import { mealTypes, mealOptions } from '../data';
 
 export default function MainMenu({setMeals, search}) {
+  //onClick={event => setOtherOptionSelection(pre => [...pre, event.target.value])}
   const [mealTypeSelection, setMealTypeSelection] = useState();
   const [otherOptionSelection, setOtherOptionSelection] = useState([]);
   const [slide, setSlide] = useState('slideInLeft')
-  const [highlight, setHighlight] = useState({backgroundColor: '#f88c00'})
 
-  const handleSetMealType= (event) => {
-    setHighlight({backgroundColor: 'rgb(247, 169, 66)'});
-    setMealTypeSelection(event.target.innerHTML)
+  const handleOtherOptions = (event) => {
+    if (event.target.checked) {
+      setOtherOptionSelection(pre => [...pre, event.target.value])
+    } else {
+      let newOptions = [];
+      for (let i = 0; i < otherOptionSelection.length; i++) {
+        if (otherOptionSelection[i] !== event.target.value) {
+          newOptions.push(otherOptionSelection[i])
+        }
+      }
+      setOtherOptionSelection(newOptions)
+    }
   }
 
   const handleSubmit = () => {
@@ -28,7 +37,6 @@ export default function MainMenu({setMeals, search}) {
 
   return (
     <div className="main-menu" id={slide}>
-
       <h2>Please select from the following options:</h2>
       <div className="choose-options">
 
@@ -39,7 +47,12 @@ export default function MainMenu({setMeals, search}) {
             {mealTypes.map((item, index) => <option key={index} value={item}>{item}</option>)}
   </select>*/}
           <div id="meal-types">
-            {mealTypes.map((item, index) => <p style={highlight} onClick={event => handleSetMealType(event)} key={index} value={item}>{item}</p>)}
+            {mealTypes.map((item, index) => 
+              <div key={index}>
+                <input id={item} type="radio" name="meal-type-selection" onClick={event => setMealTypeSelection(event.target.value)} value={item}></input>
+                <label id="meal-type-label" htmlFor={item}>{item}</label>
+              </div>
+            )}
           </div>
         </div>
 
@@ -49,7 +62,7 @@ export default function MainMenu({setMeals, search}) {
             {mealOptions.map((option, index) =>
               <div key={index} className="each-option">
                 <div className="options">
-                  <input type="checkbox" value={option.name} id={option.name} onClick={event => setOtherOptionSelection(pre => [...pre, event.target.value])}></input>
+                  <input type="checkbox" value={option.name} id={option.name} onClick={handleOtherOptions}></input>
                   <label htmlFor={option.name} className="label-background">
                     <img src={option.logo} height="30px" alt={option.name}/>
                     {option.name}

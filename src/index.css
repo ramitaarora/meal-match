@@ -34,9 +34,9 @@ option, button {
   height: 700px;
   width: 375px;
   margin: 0 auto;
-  /* border: 1px solid grey; */
-  /* box-shadow: 5px 5px 5px grey; */
-  /* border-radius: 15px; */
+  /* border: 1px solid blue; */
+  box-shadow: 5px 5px 5px grey;
+  border-radius: var(--radius);
   overflow: hidden;
   background: linear-gradient(var(--yellow), 80%, #f88c00);
 }
@@ -53,7 +53,7 @@ option, button {
 .meal-choice,
 .recipe,
 .add-recipe {
-  /* margin: 0px 10px 0px 10px; */
+  margin: 0px 10px 0px 10px;
   /* padding: 0px; */
   /* border: 1px solid blue; */
   height: 500px;
@@ -70,9 +70,12 @@ option, button {
 
 #navigation {
   /* background-color: #f88c00; */
-  padding: 20px;
+  margin-top: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-evenly;
+  /* border: 1px solid green; */
+  height: 40px;
 }
 
 #navigation svg:hover {
@@ -222,7 +225,7 @@ option, button {
 .main-menu h2 {
   text-align: center;
   font-size: 110%;
-  /* margin-top: 30px; */
+  margin-top: 0;
 }
 
 .main-menu p, 
@@ -248,27 +251,33 @@ option, button {
 }
 
 #meal-types {
+  height: 100px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 10px;
 }
 
-#meal-types p {
+#meal-type-label {
   background-color: var(--orange);
   padding: 10px;
-  width: 80px;
   color: white;
   border-radius: var(--radius);
-  margin: 5px;
   text-align: center;
   cursor: pointer;
+  display: block;
+  width: 80px;
 }
 
-#meal-types p:hover {
+#meal-types label:hover {
   background-color: var(--lightorange);
 }
 
-#highlight {
+.options input, #meal-types input {
+  display: none;
+}
+
+#meal-types input:checked ~ #meal-type-label {
   background-color: var(--lightorange);
 }
 
@@ -289,7 +298,6 @@ option, button {
 }
 
 .options {
-  
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -307,10 +315,6 @@ option, button {
   padding: 15px;
   width: 60px;
   height: 60px;
-}
-
-.options input {
-  display: none;
 }
 
 .options label:hover {
@@ -425,6 +429,10 @@ option, button {
 }
 
 /* Recipe Card */
+
+.recipe {
+  margin: 0 20px;
+}
 
 #recipe-container {
   display: flex;
