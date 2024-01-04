@@ -98,7 +98,7 @@ export default function App() {
     <div className="app">
       <div className="app-card">
         <Header />
-        <div id={slide}>
+        <div id={slide} className="pages">
         {setPages()}
         </div>
         <Nav back={backButton} search={searchPage} slide={slide} setSlide={setSlide}/>

@@ -34,11 +34,13 @@ option, button {
   height: 700px;
   width: 375px;
   margin: 0 auto;
-  /* border: 1px solid blue; */
   box-shadow: 5px 5px 5px grey;
   border-radius: var(--radius);
   overflow: hidden;
   background: linear-gradient(var(--yellow), 80%, #f88c00);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .app-card h1 {
@@ -48,15 +50,10 @@ option, button {
   font-size: 50px;
 }
 
-.main-menu, 
-.search-recipes,
-.meal-choice,
-.recipe,
-.add-recipe {
+.pages {
   margin: 0px 10px 0px 10px;
-  /* padding: 0px; */
-  /* border: 1px solid blue; */
-  height: 500px;
+  min-height: 500px;
+  max-height: 500px;
 }
 
 /* Header & Navigation Styles */
@@ -64,40 +61,18 @@ option, button {
 #header {
   display: flex;
   align-items: center;
-  /* border: 1px solid black; */
-  /* margin: 10px auto; */
 }
 
 #navigation {
-  /* background-color: #f88c00; */
-  margin-top: 20px;
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
-  /* border: 1px solid green; */
-  height: 40px;
+  align-items: center;
+  height: 50px;
 }
 
-#navigation svg:hover {
+#home-svg, #search-svg {
   cursor: pointer;
-}
-
-/* Home Button Styles */
-
-.back-arrow {
-  display: flex;
-}
-
-.back-arrow p {
-  font-size: 12px;
-  margin: 0 5px;
-  align-self: flex-end;
-}
-
-.back-arrow svg {
-  height: 30px;
-  width: 30px;
-  margin: 0 0 0px 15px;
 }
 
 /* Animations */
@@ -227,21 +202,6 @@ option, button {
   font-size: 110%;
   margin-top: 0;
 }
-
-.main-menu p, 
-.main-menu input, 
-.main-menu select,
-.main-menu label {
-  font-size: 100%;
-}
-
-/* .choose-meal-type select {
-  margin-left: 10px;
-  padding: 0 15px;
-  height: 40px;
-  border: 1px solid lightgrey;
-  border-radius: 10px;
-} */
 
 .choose-meal-type {
   display: flex;
