@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import { allMeals } from '../data';
 
-export default function MealChoice({mealOptionsData, allOptionsData, mealChoice, back}) {
+export default function MealChoice({mealOptionsData, allOptionsData, mealChoice, slide, setSlide}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mealArray, setMealArray] = useState(allMeals);
   const [animation, setAnimation] = useState('');
-  const [slide, setSlide] = useState('slideInLeft');
   const [length, setLength] = useState(false);
 
   useEffect (() => {
@@ -36,10 +35,6 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
       setTimeout(() => {
         setAnimation('backIn')
       }, 500)
-
-      // setTimeout(() => {
-      //   setAnimation('')
-      // }, 2000)
     }
   }, [animation])
 
@@ -64,13 +59,6 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
     setTimeout(() => {
       setSlide('slideOutRight')
       mealChoice(mealArray[currentIndex]);
-    }, 300)
-  }
-
-  const handleHome = () => {
-    setSlide('slideOutLeft');
-    setTimeout(() => {
-      back()
     }, 300)
   }
 
@@ -103,9 +91,6 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
       ) :
       <div id="error">
           <p>No meals found!</p>
-          <div className="back">
-            <button onClick={handleHome}>Back to Main Menu</button>
-          </div>
       </div>
     }
     </div>

@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { allMeals } from '../data';
 
-export default function SearchRecipes ({back, selectedMeal}) {
+export default function SearchRecipes ({back, selectedMeal, slide, setSlide}) {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [slide, setSlide] = useState('slideInLeft');
 
   useEffect (() => {
     let searchMeals = allMeals.filter((meal) => ( 
@@ -13,7 +12,6 @@ export default function SearchRecipes ({back, selectedMeal}) {
       (meal.ingredients).includes(searchTerm.toLowerCase())
     ));
     setSearchResults(searchMeals);
-    //console.log(searchResults)
   }, [searchTerm])
 
   const selectMeal = (event) => {
@@ -23,13 +21,6 @@ export default function SearchRecipes ({back, selectedMeal}) {
       selectedMeal(allMeals[mealIndex]);
     }, 300)
     
-  }
-
-  const handleHome = () => {
-    setSlide('slideOutLeft');
-    setTimeout(() => {
-      back()
-    }, 300);
   }
 
   return (

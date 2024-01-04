@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { mealTypes, mealOptions } from '../data';
 
-export default function MainMenu({setMeals, search}) {
-  //onClick={event => setOtherOptionSelection(pre => [...pre, event.target.value])}
+export default function MainMenu({setMeals, slide, setSlide}) {
   const [mealTypeSelection, setMealTypeSelection] = useState();
   const [otherOptionSelection, setOtherOptionSelection] = useState([]);
-  const [slide, setSlide] = useState('slideInLeft')
 
   const handleOtherOptions = (event) => {
     if (event.target.checked) {
@@ -28,13 +26,6 @@ export default function MainMenu({setMeals, search}) {
     }, 500)
   }
 
-  const handleSearch = () => {
-    setSlide('slideOutRight');
-    setTimeout(() => {
-      search()
-    }, 300)
-  }
-
   return (
     <div className="main-menu" id={slide}>
       <h2>Please select from the following options:</h2>
@@ -42,10 +33,6 @@ export default function MainMenu({setMeals, search}) {
 
         <div className="choose-meal-type">
           <p>Choose Meal Type:</p>
-          {/*<select id="meal-types" value={mealTypeSelection} onChange={event => setMealTypeSelection(event.target.value)}>
-            <option value=''>All</option>
-            {mealTypes.map((item, index) => <option key={index} value={item}>{item}</option>)}
-  </select>*/}
           <div id="meal-types">
             {mealTypes.map((item, index) => 
               <div key={index}>

@@ -1,13 +1,13 @@
-export default function Nav({back, search}) {
+export default function Nav({back, search, slide, setSlide}) {
     const handleHome = () => {
-        // setSlide('slideOutLeft');
+        setSlide('slideOutLeft');
         setTimeout(() => {
           back()
         }, 300)
       }
 
       const handleSearch = () => {
-        // setSlide('slideOutRight');
+        setSlide('slideOutRight');
         setTimeout(() => {
           search()
         }, 300)

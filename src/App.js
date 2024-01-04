@@ -23,6 +23,9 @@ export default function App() {
   // SearchRecipes Page States
   const [searchRecipes, setSearchRecipes] = useState(false);
 
+  // Slide Animations
+  const [slide, setSlide] = useState('slideInLeft')
+
 
   const setMeals = (mealData, optionData) => {
     setMealTypeData(mealData);
@@ -31,6 +34,8 @@ export default function App() {
     //console.log(optionTypeData);
     setMainMenuPage(false);
     setMealChoicePage(true);
+
+    setSlide('slideInLeft')
   }
 
   const setMealSelection = (chosenMeal) => {
@@ -38,6 +43,8 @@ export default function App() {
     setMealChoicePage(false);
     setSearchRecipes(false);
     setRecipePage(true);
+
+    setSlide('slideInLeft')
   }
 
   const backButton = () => {
@@ -48,22 +55,38 @@ export default function App() {
     setOptionTypeData([]);
     setMealChoice();
     setMainMenuPage(true);
+
+    setSlide('slideInLeft')
   }
 
   const searchPage = () => {
     setMainMenuPage(false);
+    setMealChoicePage(false);
+    setRecipePage(false);
+    setMealTypeData(mealTypes[0]);
+    setOptionTypeData([]);
+    setMealChoice();
     setSearchRecipes(true);
+
+    setSlide('slideInLeft')
+  }
+
+  const handleSearch = () => {
+    setSlide('slideOutRight');
+    setTimeout(() => {
+      searchPage()
+    }, 300)
   }
 
   const setPages = () => {
     if (mainMenuPage) {
-      return <MainMenu setMeals={setMeals} search={searchPage}/>
+      return <MainMenu setMeals={setMeals} search={handleSearch} slide={slide} setSlide={setSlide}/>
     } else if (mealChoicePage) {
-      return <MealChoice mealOptionsData={mealTypeData} allOptionsData={optionTypeData} mealChoice={setMealSelection} back={backButton}/>
+      return <MealChoice mealOptionsData={mealTypeData} allOptionsData={optionTypeData} mealChoice={setMealSelection} slide={slide} setSlide={setSlide}/>
     } else if (recipePage) {
-      return <Recipe selectedMeal={mealChoice} back={backButton} />
+      return <Recipe selectedMeal={mealChoice} slide={slide} setSlide={setSlide}/>
     } else if (searchRecipes) {
-      return <SearchRecipes back={backButton} selectedMeal={setMealSelection}/>
+      return <SearchRecipes selectedMeal={setMealSelection} slide={slide} setSlide={setSlide}/>
     }
     
     else {
@@ -75,8 +98,10 @@ export default function App() {
     <div className="app">
       <div className="app-card">
         <Header />
+        <div id={slide}>
         {setPages()}
-        <Nav back={backButton} search={searchPage}/>
+        </div>
+        <Nav back={backButton} search={searchPage} slide={slide} setSlide={setSlide}/>
       </div>
     </div>
     

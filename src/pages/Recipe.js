@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 
-export default function Recipe({selectedMeal, back}) {
+export default function Recipe({selectedMeal, slide, setSlide}) {
   const [step, setStep] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevColor, setPrevColor] = useState({color: '', cursor: ''})
   const [nextColor, setNextColor] = useState({color: '', cursor: ''})
-  const [slide, setSlide] = useState('');
-  const [recipeSlide, setRecipeSlide] = useState('slideInLeft')
 
   useEffect(() => {
     if (currentIndex === 0 && selectedMeal.instructions.length === 1) {
@@ -63,15 +61,8 @@ export default function Recipe({selectedMeal, back}) {
     }
   }
 
-  const handleHome = () => {
-    setRecipeSlide('slideOutLeft');
-    setTimeout(() => {
-      back()
-    }, 300);
-  }
-
   return (
-    <div className="recipe" id={recipeSlide}>
+    <div className="recipe" id={slide}>
       <div id="recipe-container">
         <h2>Recipe for {selectedMeal.mealName}</h2>
         
