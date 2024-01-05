@@ -19,12 +19,14 @@ export default function MealChoice({mealOptionsData, allOptionsData, mealChoice,
     }
 
     if (newMealArray.length !== 0) {
-      setMealArray(newMealArray);
+      let shuffledMealArray = newMealArray.sort(() => Math.random() - 0.5);
+      setMealArray(shuffledMealArray);
       setLength(true);
     }
 
     else if (newMealArray.length === 0 && !mealOptionsData && allOptionsData[0].length === 0) {
-      setMealArray(allMeals);
+      let shuffledMealArray = allMeals.sort(() => Math.random() - 0.5);
+      setMealArray(shuffledMealArray);
       setLength(true);
     } 
 
