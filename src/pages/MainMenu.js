@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { mealTypes, mealOptions } from '../data';
 
 export default function MainMenu({setMeals, slide, setSlide}) {
