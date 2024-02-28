@@ -372,20 +372,12 @@ option, button {
 .next svg, .heart svg {
   height: 50px;
   width: 50px;
+  color: black;
 }
 
 .next svg:hover, .heart svg:hover {
+  color: rgb(35, 35, 35);
   cursor: pointer;
-  position: relative;
-  top: -10px;
-}
-
-.next svg:hover {
-  left: -10px;
-}
-
-.heart svg:hover {
-  right: -10px;
 }
 
 /* Recipe Card */

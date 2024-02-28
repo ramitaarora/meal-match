@@ -49,7 +49,7 @@ class Meal {
 
 // Breakfast
 
-const pancakes = new Meal("Pancakes", "Breakfast", "https://github.com/ramitaarora/meal-match/blob/main/public/images/pancakes.jpg?raw=true", ["Vegetarian", "Vegan"]);
+const pancakes = new Meal("Pancakes", "Breakfast", "/meal-match/images/pancakes.jpg", ["Vegetarian", "Vegan"]);
 pancakes.generateRecipe(1, "cup", "flour");
 pancakes.generateRecipe(1, "", "banana");
 pancakes.generateRecipe(1, "cup", "water");
@@ -59,7 +59,7 @@ pancakes.addInstructions("Mix all ingredients together in a bowl until liquidy a
 pancakes.addInstructions("Use a ladle and pour pancake batter onto a med-hot griddle.")
 pancakes.addInstructions("Flip over every 30 seconds or so until golden brown.")
 
-const eggsToast = new Meal("Eggs and Toast", "Breakfast", "https://github.com/ramitaarora/meal-match/blob/main/public/images/eggs-toast.jpg?raw=true", ["Healthy", "Vegetarian"]);
+const eggsToast = new Meal("Eggs and Toast", "Breakfast", "/meal-match/images/eggs-toast.jpg", ["Healthy", "Vegetarian"]);
 eggsToast.generateRecipe(2, "", "eggs");
 eggsToast.generateRecipe(2, "pieces of", "toast");
 eggsToast.generateRecipe(1, "pinch of", "salt and/or pepper");
@@ -67,7 +67,7 @@ eggsToast.addInstructions("Toast the bread.");
 eggsToast.addInstructions("Crack eggs over a med-hot pan and cover with a lid for two minutes.");
 eggsToast.addInstructions("Serve together when yolks are cooked as desired.");
 
-const breakfastQuiche = new Meal("Crustless Breakfast Quiche", "Breakfast", "https://github.com/ramitaarora/meal-match/blob/main/public/images/breakfast-quiche.jpg?raw=true", ["Gluten-Free", "Vegetarian"]);
+const breakfastQuiche = new Meal("Crustless Breakfast Quiche", "Breakfast", "/meal-match/images/breakfast-quiche.jpg", ["Gluten-Free", "Vegetarian"]);
 breakfastQuiche.generateRecipe("3", "", "eggs");
 breakfastQuiche.generateRecipe("1", "cup", "mushrooms");
 breakfastQuiche.generateRecipe("1", "cup", "shredded cheese");
@@ -78,7 +78,7 @@ breakfastQuiche.addInstructions("In a bowl, beat the eggs with the spices.");
 breakfastQuiche.addInstructions("Add all the ingredits into a pie dish or pan.");
 breakfastQuiche.addInstructions("Bake at 375F for 30 minutes.");
 
-const crepes = new Meal("Crepes", "Breakfast", "https://github.com/ramitaarora/meal-match/blob/main/public/images/crepes.jpg?raw=true", ["Vegetarian"]);
+const crepes = new Meal("Crepes", "Breakfast", "/meal-match/images/crepes.jpg", ["Vegetarian"]);
 crepes.generateRecipe("1", "cup", "flour");
 crepes.generateRecipe("2", "", "eggs");
 crepes.generateRecipe("1", "cup", "milk");
@@ -90,7 +90,7 @@ crepes.addInstructions("Heat a pan to med-hot and oil lightly before cooking eac
 crepes.addInstructions("Pour the batter and tilt the pan until the crepe has spread.")
 crepes.addInstructions("Flip crepes every 30 seconds or so until golden-brown.")
 
-const loxBagel = new Meal("Lox Bagel", "Breakfast", "https://github.com/ramitaarora/meal-match/blob/main/public/images/lox-bagel.jpg?raw=true", []);
+const loxBagel = new Meal("Lox Bagel", "Breakfast", "/meal-match/images/lox-bagel.jpg", []);
 loxBagel.generateRecipe("1", "", "bagel");
 loxBagel.generateRecipe("1", "tbsp", "cream cheese");
 loxBagel.generateRecipe("a few", "slices of smoked", "salmon");
@@ -99,7 +99,7 @@ loxBagel.generateRecipe("one", "slice of", "tomato");
 loxBagel.addInstructions("Cup the bagel in half and toast.")
 loxBagel.addInstructions("Put toppings onto the bagel and enjoy.")
 
-const omelette = new Meal("Omelette", "Breakfast", "https://github.com/ramitaarora/meal-match/blob/main/public/images/omelette.jpg?raw=true", ["Vegetarian", "Healthy", "Gluten-Free"]);
+const omelette = new Meal("Omelette", "Breakfast", "/meal-match/images/omelette.jpg", ["Vegetarian", "Healthy", "Gluten-Free"]);
 omelette.generateRecipe("2", "", "eggs");
 omelette.generateRecipe("1", "", "green onion");
 omelette.generateRecipe("3", "", "mushrooms");
@@ -111,7 +111,7 @@ omelette.addInstructions("Over a medium heated pan, cook the vegetables with a b
 omelette.addInstructions("Pour in the eggs, sprinkle on the cheese and cover the pan with a lid.")
 omelette.addInstructions("After two minutes, uncover, fold over and enjoy.")
 
-const shakshuka = new Meal("Shakshuka", "Breakfast", "https://github.com/ramitaarora/meal-match/blob/main/public/images/shakshuka.jpg?raw=true", ["Healthy", "Gluten-Free"]);
+const shakshuka = new Meal("Shakshuka", "Breakfast", "/meal-match/images/shakshuka.jpg", ["Healthy", "Gluten-Free"]);
 shakshuka.generateRecipe("1", "", "onion");
 shakshuka.generateRecipe("1", "", "red bell pepper");
 shakshuka.generateRecipe("4", "cloves of ", "garlic");
@@ -124,7 +124,7 @@ shakshuka.addInstructions("In a heated pan, saute chopped onions and bell pepper
 shakshuka.addInstructions("Add garlic, spices and peeled tomatoes. Break down the tomatoes with a spatula and bring the sauce to a simmer.")
 shakshuka.addInstructions("Make small wells in the sauce and add each egg into a well. Cover the pan and cook for 5-8 minutes.")
 
-const avocadoToast = new Meal("Avocado Toast", "Breakfast", "https://github.com/ramitaarora/meal-match/blob/main/public/images/avocado-toast.jpg?raw=true", ["Healthy", "Vegetarian", "Vegan"]);
+const avocadoToast = new Meal("Avocado Toast", "Breakfast", "/meal-match/images/avocado-toast.jpg", ["Healthy", "Vegetarian", "Vegan"]);
 avocadoToast.generateRecipe("1", "slice", "bread");
 avocadoToast.generateRecipe("1/2", "", "avocado");
 avocadoToast.generateRecipe("1/2", "tsp", "lemon juice");
@@ -137,7 +137,7 @@ avocadoToast.addInstructions("(Optional) Cook egg to your liking (scrambled, boi
 
 // Lunch
 
-const salad = new Meal("Salad", "Lunch", "https://github.com/ramitaarora/meal-match/blob/main/public/images/salad.jpg?raw=true", ["Vegetarian", "Healthy", "Gluten-Free", "Vegan"]);
+const salad = new Meal("Salad", "Lunch", "/meal-match/images/salad.jpg", ["Vegetarian", "Healthy", "Gluten-Free", "Vegan"]);
 salad.generateRecipe(1, "cup", "lettuce");
 salad.generateRecipe(1, "", "tomato");
 salad.generateRecipe("quarter", "", "cucumber");
@@ -149,7 +149,7 @@ salad.generateRecipe("1", "tsp", "dressing");
 salad.addInstructions("Chop all vegetables as desired.")
 salad.addInstructions("Mix together throughly with a drizzle of a dressing of your choosing, and enjoy.")
 
-const avocadoSandwich = new Meal("Avocado Sandwich", "Lunch", "https://github.com/ramitaarora/meal-match/blob/main/public/images/avocado-sandwich.jpg?raw=true", ["Vegetarian", "Healthy"]);
+const avocadoSandwich = new Meal("Avocado Sandwich", "Lunch", "/meal-match/images/avocado-sandwich.jpg", ["Vegetarian", "Healthy"]);
 avocadoSandwich.generateRecipe("2", "slices of", "bread");
 avocadoSandwich.generateRecipe("1/2", "", "avocado");
 avocadoSandwich.generateRecipe("1/2", "tsp", "lemon juice");
@@ -160,7 +160,7 @@ avocadoSandwich.generateRecipe("1", "slice of", "tomato");
 avocadoSandwich.addInstructions("Mash avocado with lemon juice, salt, pepper and any other spices desired.")
 avocadoSandwich.addInstructions("Toast bread and add avocado mixture, cheese, cucumbers and tomatoes to bread. Put together and enjoy.")
 
-const lentilSoup = new Meal("Lentil Soup", "Lunch", "https://github.com/ramitaarora/meal-match/blob/main/public/images/lentil-soup.jpg?raw=true", ["Gluten-Free", "Healthy", "Vegetarian", "Vegan"]);
+const lentilSoup = new Meal("Lentil Soup", "Lunch", "/meal-match/images/lentil-soup.jpg", ["Gluten-Free", "Healthy", "Vegetarian", "Vegan"]);
 lentilSoup.generateRecipe("1/2", "", "onion");
 lentilSoup.generateRecipe("1", "clove", "garlic");
 lentilSoup.generateRecipe("1/2", "", "carrot");
@@ -178,7 +178,7 @@ lentilSoup.addInstructions("Add peeled and chopped carrots ans celery. Cook unti
 lentilSoup.addInstructions("Add the remaining ingredients except lentils. Bring to a simmer for 15 minutes and stir often.")
 lentilSoup.addInstructions("Add the lentils and simmar for another 15 minutes.")
 
-const pumpkinSoup = new Meal("Pumpkin Soup", "Lunch", "https://github.com/ramitaarora/meal-match/blob/main/public/images/pumpkin-soup.jpg?raw=true", ["Healthy", "Gluten-Free", "Vegetarian", "Vegan"]);
+const pumpkinSoup = new Meal("Pumpkin Soup", "Lunch", "/meal-match/images/pumpkin-soup.jpg", ["Healthy", "Gluten-Free", "Vegetarian", "Vegan"]);
 pumpkinSoup.generateRecipe("1", "", "sugar pie pumpkin");
 pumpkinSoup.generateRecipe("4", "cups", "broth");
 pumpkinSoup.generateRecipe("1", "", "onion");
@@ -193,7 +193,7 @@ pumpkinSoup.addInstructions("Cook chopped onions and garlic in a medium-hot pot 
 pumpkinSoup.addInstructions("Add pumpkin flesh, cinnamon, nutmeg, salt and pepper and broth to the pot. Bring to a boil and summer for 15 minutes.")
 pumpkinSoup.addInstructions("Stir in coconut milk and maple syrup before letting it cool. Once cooled, use a blender to blend the soup.")
 
-const grilledChickenSandwich = new Meal("Grilled Chicken Sandwich", "Lunch", "https://github.com/ramitaarora/meal-match/blob/main/public/images/chicken-sandwich.jpg?raw=true", ["Healthy"]);
+const grilledChickenSandwich = new Meal("Grilled Chicken Sandwich", "Lunch", "/meal-match/images/chicken-sandwich.jpg", ["Healthy"]);
 grilledChickenSandwich.generateRecipe("2", "slices of", "bread");
 grilledChickenSandwich.generateRecipe("1/4", "lb", "chicken");
 grilledChickenSandwich.generateRecipe("", "", "salt and pepper");
@@ -204,7 +204,7 @@ grilledChickenSandwich.addInstructions("Chop chicken and cook in a pan over high
 grilledChickenSandwich.addInstructions("Toast bread and combine other ingredients on top of bread while chicken cooks.")
 grilledChickenSandwich.addInstructions("Add chicken to sandwich and top off with any other toppings or sauces.")
 
-const spinachChicken = new Meal("Spinach Chicken Salad", "Lunch", "https://github.com/ramitaarora/meal-match/blob/main/public/images/spinach-chicken.jpg?raw=true", ["Healthy", "Gluten-Free"]);
+const spinachChicken = new Meal("Spinach Chicken Salad", "Lunch", "/meal-match/images/spinach-chicken.jpg", ["Healthy", "Gluten-Free"]);
 spinachChicken.generateRecipe("2", "cups", "spinach");
 spinachChicken.generateRecipe("1/2", "lb", "chicken");
 spinachChicken.generateRecipe("1/4", "cup", "pomegranate seeds");
@@ -214,7 +214,7 @@ spinachChicken.addInstructions("Chop chicken and cook in a pan over high heat. T
 spinachChicken.addInstructions("Add spinach, pomegranate, goat cheese and almonds to a bowl while chicken cooks.")
 spinachChicken.addInstructions("Add chicken to salad and enjoy.")
 
-const ramen = new Meal("Ramen", "Lunch", "https://github.com/ramitaarora/meal-match/blob/main/public/images/ramen.jpg?raw=true", ["Vegetarian"])
+const ramen = new Meal("Ramen", "Lunch", "/meal-match/images/ramen.jpg", ["Vegetarian"])
 ramen.generateRecipe("2", "packs", "ramen noodles")
 ramen.generateRecipe("4", "cups", "chicken or vegetable broth")
 ramen.generateRecipe("2", "cups", "sliced vegetables (e.g., bok choy, mushrooms, carrots)")
@@ -236,7 +236,7 @@ ramen.addInstructions("Serve immediately and enjoy your homemade ramen!")
 
 // Dinner
 
-const butterChicken = new Meal("Butter Chicken", "Dinner", "https://github.com/ramitaarora/meal-match/blob/main/public/images/butter-chicken.jpg?raw=true", ["Gluten-Free"]);
+const butterChicken = new Meal("Butter Chicken", "Dinner", "/meal-match/images/butter-chicken.jpg", ["Gluten-Free"]);
 butterChicken.generateRecipe(1, "lb", "chicken");
 butterChicken.generateRecipe(1, "", "roma tomato");
 butterChicken.generateRecipe(2, "tbsp", "tomato paste/sauce");
@@ -249,7 +249,7 @@ butterChicken.addInstructions("Add chopped roma tomatoes, tomato paste/sauce and
 butterChicken.addInstructions("Add chopped chicken breast or thighs into the wok and top with yogurt. Add water until chicken is just submerged.")
 butterChicken.addInstructions("Boil, then simmer until chicken is thoroughly cooked.")
 
-const tacos = new Meal("Tacos", "Dinner", "https://github.com/ramitaarora/meal-match/blob/main/public/images/tacos.jpg?raw=true", ["Vegetarian"])
+const tacos = new Meal("Tacos", "Dinner", "/meal-match/images/tacos.jpg", ["Vegetarian"])
 tacos.generateRecipe("", "", "taco shells");
 tacos.generateRecipe("", "", "meat of choice (optional)");
 tacos.generateRecipe("", "", "chopped lettuce");
@@ -261,7 +261,7 @@ tacos.addInstructions("Heat refried beans in a pan until hot.")
 tacos.addInstructions("Add meat (optional), refried beans, chopped lettuce and cheese to taco shells.")
 tacos.addInstructions("Enjoy with salsa, guacamole or sour cream.")
 
-const burger = new Meal("Burger", "Dinner", "https://github.com/ramitaarora/meal-match/blob/main/public/images/burger.jpg?raw=true", []);
+const burger = new Meal("Burger", "Dinner", "/meal-match/images/burger.jpg", []);
 burger.generateRecipe(1, "", "burger patty");
 burger.generateRecipe("", "", "buns");
 burger.generateRecipe(1, "slice", "onion");
@@ -273,7 +273,7 @@ burger.addInstructions("Toast burger bun for 2 minutes.")
 burger.addInstructions("Add slices of onion, tomato and cheese in the burger bun. Place burger patty on top of cheese for melting.")
 burger.addInstructions("Add ketchup, mustard or any other condiments as desired.")
 
-const biriyani = new Meal("Biriyani", "Dinner", "https://github.com/ramitaarora/meal-match/blob/main/public/images/biryani.jpg?raw=true", ["Gluten-Free"]);
+const biriyani = new Meal("Biriyani", "Dinner", "/meal-match/images/biryani.jpg", ["Gluten-Free"]);
 biriyani.generateRecipe(1, "cup", "rice");
 biriyani.generateRecipe(1, "lb", "chicken thighs");
 biriyani.generateRecipe(2, "tsp", "biriyani masala");
@@ -292,7 +292,7 @@ biriyani.addInstructions("Add chopped chicken thighs into the wok and top with y
 biriyani.addInstructions("Boil, then simmer for twenty minutes.")
 biriyani.addInstructions("Add rice evenly on top of chicken, patting it on top to seal. Cover with a lid until serving.")
 
-const pasta = new Meal("Pasta", "Dinner", "https://github.com/ramitaarora/meal-match/blob/main/public/images/pasta.jpg?raw=true", ["Vegetarian", "Vegan"]);
+const pasta = new Meal("Pasta", "Dinner", "/meal-match/images/pasta.jpg", ["Vegetarian", "Vegan"]);
 pasta.generateRecipe(1, "cup", "pasta");
 pasta.generateRecipe("1/2", "cup", "pasta sauce");
 pasta.generateRecipe(2, "cloves of", "garlic");
@@ -304,7 +304,7 @@ pasta.addInstructions("Cook all vegetables on medium heat with salt until onions
 pasta.addInstructions("When pasta is al dente, add to vegetables and add in the sauce.")
 pasta.addInstructions("Cook just until the sauce bubbles then serve.")
 
-const pizza = new Meal("Pizza", "Dinner", "https://github.com/ramitaarora/meal-match/blob/main/public/images/pizza.jpg?raw=true", ["Vegetarian"]);
+const pizza = new Meal("Pizza", "Dinner", "/meal-match/images/pizza.jpg", ["Vegetarian"]);
 pizza.generateRecipe(1, "cup", "pizza dough");
 pizza.generateRecipe("1/2", "cup", "pizza sauce");
 pizza.generateRecipe(2, "cloves of", "garlic");
@@ -318,7 +318,7 @@ pizza.addInstructions("Thinly slice the onion and mushrooms, then distribute the
 pizza.addInstructions("Bake the pizza in the preheated oven until the crust is golden and the toppings are cooked.");
 pizza.addInstructions("Remove from the oven and let it cool for a few minutes before slicing and serving.");
 
-const salmon = new Meal("Salmon", "Dinner", "https://github.com/ramitaarora/meal-match/blob/main/public/images/salmon.jpg?raw=true", ["Healthy", "Gluten-Free"]);
+const salmon = new Meal("Salmon", "Dinner", "/meal-match/images/salmon.jpg", ["Healthy", "Gluten-Free"]);
 salmon.generateRecipe(2, "fillets of ", "salmon")
 salmon.generateRecipe("1/2", "cup", "fresh basil leaves")
 salmon.generateRecipe("1/4", "cup", "pine nuts")
@@ -334,7 +334,7 @@ salmon.addInstructions("In a food processor, combine fresh basil, pine nuts, Par
 salmon.addInstructions("Spread a generous layer of pesto sauce over each salmon fillet, ensuring they are evenly coated.")
 salmon.addInstructions("Bake in the preheated oven for 12-15 minutes or until the salmon flakes easily with a fork.")
 
-const sushi = new Meal("Sushi", "Dinner", "https://github.com/ramitaarora/meal-match/blob/main/public/images/sushi.jpg?raw=true", ["Healthy", "Gluten-Free"]);
+const sushi = new Meal("Sushi", "Dinner", "/meal-match/images/sushi.jpg", ["Healthy", "Gluten-Free"]);
 sushi.generateRecipe("2", "cups", "sushi rice")
 sushi.generateRecipe("1/4", "cup", "rice vinegar")
 sushi.generateRecipe("1", "tbsp", "sugar")
@@ -357,18 +357,18 @@ sushi.addInstructions("Serve the sushi rolls with soy sauce, pickled ginger, and
 
 // Snacks
 
-const applesPB = new Meal("Apples and Peanut Butter", "Snacks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/apples-peanut-butter.jpg?raw=true", ["Vegetarian", "Gluten-Free", "Healthy"]);
+const applesPB = new Meal("Apples and Peanut Butter", "Snacks", "/meal-match/images/apples-peanut-butter.jpg", ["Vegetarian", "Gluten-Free", "Healthy"]);
 applesPB.generateRecipe(1, "whole", "apple");
 applesPB.generateRecipe(1, "tbsp", "peanut butter");
 applesPB.addInstructions("Cut apple into slices. Enjoy by dipping into peanut butter.")
 
-const breadCheese = new Meal("Bread, Cheese & Meat", "Snacks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/bread-cheese-snack.jpg?raw=true", ["Healthy"]);
+const breadCheese = new Meal("Bread, Cheese & Meat", "Snacks", "/meal-match/images/bread-cheese-snack.jpg", ["Healthy"]);
 breadCheese.generateRecipe(1, "slice", "bread");
 breadCheese.generateRecipe(1, "slice", "deli meat of choice");
 breadCheese.generateRecipe(1, "slice", "cheese");
 breadCheese.addInstructions("Toast bread and enjoy with cheese, deli meat and any other toppings desired.")
 
-const charcuterieBoard = new Meal("Charcuterie Board", "Snacks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/charcuterie-board.jpg?raw=true", ["Healthy"]);
+const charcuterieBoard = new Meal("Charcuterie Board", "Snacks", "/meal-match/images/charcuterie-board.jpg", ["Healthy"]);
 charcuterieBoard.generateRecipe("", "assorted", "cheeses (e.g., brie, cheddar, gouda, blue cheese)")
 charcuterieBoard.generateRecipe("", "assorted", "cured meats (e.g., prosciutto, salami, chorizo)")
 charcuterieBoard.generateRecipe("1", "cup", "mixed nuts")
@@ -389,14 +389,14 @@ charcuterieBoard.addInstructions("Fill any remaining spaces on the board with fr
 charcuterieBoard.addInstructions("Drizzle honey over certain cheeses for added sweetness.")
 charcuterieBoard.addInstructions("Optional: Garnish with a sprig of rosemary for a decorative touch.")
 
-const peanutButterToast = new Meal("Peanut Butter Toast", "Snacks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/pb-toast.jpg?raw=true", ["Vegetarian", "Vegan"]);
+const peanutButterToast = new Meal("Peanut Butter Toast", "Snacks", "/meal-match/images/pb-toast.jpg", ["Vegetarian", "Vegan"]);
 peanutButterToast.generateRecipe("", "", "peanut butter");
 peanutButterToast.generateRecipe(1, "slice", "bread");
 peanutButterToast.addInstructions("Toast the bread and spread peanut butter on top.")
 
 // Desserts
 
-const brownies = new Meal("Brownies", "Dessert", "https://github.com/ramitaarora/meal-match/blob/main/public/images/brownies.jpg?raw=true", []);
+const brownies = new Meal("Brownies", "Dessert", "/meal-match/images/brownies.jpg", []);
 brownies.generateRecipe("1", "cup", "unsalted butter")
 brownies.generateRecipe("2", "cups", "granulated sugar")
 brownies.generateRecipe("4", "large", "eggs")
@@ -417,12 +417,12 @@ brownies.addInstructions("Pour the batter into the prepared baking pan and sprea
 brownies.addInstructions("Bake in the preheated oven for 25-30 minutes or until a toothpick inserted into the center comes out with moist crumbs (not wet batter).")
 brownies.addInstructions("Allow the brownies to cool in the pan before cutting them into squares.")
 
-const iceCream = new Meal("Ice Cream", "Dessert", "https://github.com/ramitaarora/meal-match/blob/main/public/images/ice-cream.jpg?raw=true", []);
+const iceCream = new Meal("Ice Cream", "Dessert", "/meal-match/images/ice-cream.jpg", []);
 iceCream.generateRecipe("1", "cup", "ice cream of choice");
 iceCream.generateRecipe("", "", "toppings");
 iceCream.addInstructions("Add toppings to ice cream or enjoy by itself!");
 
-const affogato = new Meal("Affogato", "Dessert", "https://github.com/ramitaarora/meal-match/blob/main/public/images/affogato.jpg?raw=true", [])
+const affogato = new Meal("Affogato", "Dessert", "/meal-match/images/affogato.jpg", [])
 affogato.generateRecipe("1", "scoop", "vanilla ice cream")
 affogato.generateRecipe("1-2", "shots", "hot espresso")
 affogato.generateRecipe("1", "tsp", "chocolate shavings (optional)")
@@ -437,18 +437,18 @@ affogato.addInstructions("Serve immediately while the espresso is hot and the ic
 
 // Drinks
 
-const tea = new Meal("Tea", "Drinks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/tea.jpg?raw=true", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+const tea = new Meal("Tea", "Drinks", "/meal-match/images/tea.jpg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
 tea.generateRecipe(1, "tsp", "tea leaves or tea bag");
 tea.addInstructions("Boil water, pour into a mug and add teabag or tea leaves to the mug.")
 tea.addInstructions("Add milk, sugar or honey as desired once tea is finished brewing.")
 
-const coffee = new Meal("Coffee", "Drinks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/coffee.jpg?raw=true", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+const coffee = new Meal("Coffee", "Drinks", "/meal-match/images/coffee.jpg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
 coffee.generateRecipe(1, "tbsp", "coffee beans")
 coffee.generateRecipe("", "", "milk, cream or sugar (as desired).")
 coffee.addInstructions("Grind the coffee, pick the size of grind according to coffee machine.")
 coffee.addInstructions("Add coffee grounds to coffee machine. Enjoy coffee with milk, cream, sugar, cinnamon and more.")
 
-const cappuccino = new Meal("Cappuccino", "Drinks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/cappucino.jpg?raw=true", ["Vegetarian", "Healthy", "Gluten-Free"]);
+const cappuccino = new Meal("Cappuccino", "Drinks", "/meal-match/images/cappucino.jpg", ["Vegetarian", "Healthy", "Gluten-Free"]);
 cappuccino.generateRecipe("1", "shot", "espresso")
 cappuccino.generateRecipe("1/2", "cup", "whole milk")
 cappuccino.generateRecipe("1/4", "cup", "whipping cream")
@@ -464,7 +464,7 @@ cappuccino.addInstructions("Sweeten the cappuccino with granulated sugar to tast
 cappuccino.addInstructions("Top the cappuccino with a dollop of whipped cream.")
 cappuccino.addInstructions("Optional: Dust the cappuccino with cocoa powder for an extra touch of flavor.")
 
-const latte = new Meal("Latte", "Drinks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/latte.jpg?raw=true", ["Vegetarian", "Healthy", "Gluten-Free"]);
+const latte = new Meal("Latte", "Drinks", "/meal-match/images/latte.jpg", ["Vegetarian", "Healthy", "Gluten-Free"]);
 latte.generateRecipe("1", "shot", "espresso")
 latte.generateRecipe("1", "cup", "milk (whole milk or any non-dairy milk of choice)")
 latte.generateRecipe("1", "tsp", "sugar (adjust to taste)")
@@ -480,7 +480,7 @@ latte.addInstructions("Sweeten the latte with sugar to taste and add vanilla ext
 latte.addInstructions("Optional: Garnish with a pinch of cinnamon or cocoa powder.")
 latte.addInstructions("Serve immediately and enjoy your homemade latte!")
 
-const hotChocolate = new Meal("Hot Chocolate", "Drinks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/hot-chocolate.jpg?raw=true", ["Vegetarian", "Gluten-Free"]);
+const hotChocolate = new Meal("Hot Chocolate", "Drinks", "/meal-match/images/hot-chocolate.jpg", ["Vegetarian", "Gluten-Free"]);
 hotChocolate.generateRecipe("2", "cups", "milk (whole milk or any non-dairy milk of choice)")
 hotChocolate.generateRecipe("2", "tbsp", "unsweetened cocoa powder")
 hotChocolate.generateRecipe("1-3", "tsp", "granulated sugar (adjust to taste)")
@@ -498,7 +498,7 @@ hotChocolate.addInstructions("Pour the hot chocolate into mugs and top with whip
 hotChocolate.addInstructions("Optional: Garnish with chocolate shavings or a sprinkle of cocoa powder.")
 hotChocolate.addInstructions("Serve immediately and enjoy your comforting cup of hot chocolate!")
 
-const icedCoffee = new Meal("Iced Coffee", "Drinks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/iced-coffee.jpg?raw=true", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+const icedCoffee = new Meal("Iced Coffee", "Drinks", "/meal-match/images/iced-coffee.jpg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
 icedCoffee.generateRecipe("1", "cup", "strong brewed coffee, chilled")
 icedCoffee.generateRecipe("1-2", "tbsp", "simple syrup (adjust to taste)")
 icedCoffee.generateRecipe("1/4", "cup", "milk or cream (optional)")
@@ -513,7 +513,7 @@ icedCoffee.addInstructions("Optional: Top with whipped cream and drizzle with ch
 icedCoffee.addInstructions("Stir the iced coffee well to combine all ingredients.")
 icedCoffee.addInstructions("Serve immediately and enjoy your refreshing iced coffee!")
 
-const lemonade = new Meal("Lemonade", "Drinks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/lemonade.jpg?raw=true", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
+const lemonade = new Meal("Lemonade", "Drinks", "/meal-match/images/lemonade.jpg", ["Vegetarian", "Vegan", "Healthy", "Gluten-Free"]);
 lemonade.generateRecipe("1", "cup", "lemon juice")
 lemonade.generateRecipe("1", "cup", "granulated sugar (adjust to taste)")
 lemonade.generateRecipe("4", "cups", "cold water")
@@ -530,7 +530,7 @@ lemonade.addInstructions("Pour the chilled lemonade over the ice.")
 lemonade.addInstructions("Optional: Garnish with lemon slices and fresh mint leaves.")
 lemonade.addInstructions("Stir before serving to mix any settled sugar.")
 
-const chai = new Meal("Chai", "Drinks", "https://github.com/ramitaarora/meal-match/blob/main/public/images/chai.jpg?raw=true", ["Vegetarian", "Gluten-Free"])
+const chai = new Meal("Chai", "Drinks", "/meal-match/images/chai.jpg", ["Vegetarian", "Gluten-Free"])
 chai.generateRecipe("2", "cups", "water")
 chai.generateRecipe("2", "cups", "milk (whole milk or any non-dairy milk of choice)")
 chai.generateRecipe("2", "tbsp", "black tea leaves")
@@ -554,19 +554,19 @@ const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks"
 const mealOptions = [
   {
     name: "Vegetarian",
-    logo: 'https://raw.githubusercontent.com/ramitaarora/meal-match/5610ceaa6294af4d3d0c9c67760bb8b1914c8d0d/public/svgs/carrot.svg'
+    logo: '/meal-match/svgs/carrot.svg'
   },
   {
     name: "Vegan",
-    logo: 'https://raw.githubusercontent.com/ramitaarora/meal-match/5610ceaa6294af4d3d0c9c67760bb8b1914c8d0d/public/svgs/leaf.svg'
+    logo: '/meal-match/svgs/leaf.svg'
   },
   {
     name: "Healthy",
-    logo: 'https://raw.githubusercontent.com/ramitaarora/meal-match/5610ceaa6294af4d3d0c9c67760bb8b1914c8d0d/public/svgs/healthy.svg'
+    logo: '/meal-match/svgs/healthy.svg'
   },
   {
     name: "Gluten-Free",
-    logo: 'https://raw.githubusercontent.com/ramitaarora/meal-match/5610ceaa6294af4d3d0c9c67760bb8b1914c8d0d/public/svgs/gluten-free.svg'
+    logo: '/meal-match/svgs/gluten-free.svg'
   },
 ]
 
